@@ -173,7 +173,7 @@ section {
     width: 100%;
     font-family: "ProximaBold";
     color: black;
-    font-size: 2rem;
+    font-size: 5vh;
     text-transform: uppercase;
     margin: 0;
     display: inline-block;
@@ -184,23 +184,23 @@ section {
     width: 100%;
     font-family: "ProximaThin";
     color: black;
-    font-size: 1.2rem;
+    font-size: 3vh;
     text-transform: capitalize;
     margin: 25px 0 15px 0;
     display: inline-block;
     text-align: center;
-    line-height: 20px;
+    line-height: 3.5vh;
 }
 
 #title-details h4 {
     width: 100%;
     font-family: "ProximaThin";
     color: black;
-    font-size: 1.1rem;
+    font-size: 2.5vh;
     margin: 10px 0 10px 0;
     display: inline-block;
     text-align: center;
-    line-height: 14px;
+    line-height: 2.5vh;
 
 }
 
@@ -211,7 +211,7 @@ section {
 
 #title-icons {
     margin: 20px 0 10px 0;
-    width: 70%;
+    width: 70vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -220,8 +220,8 @@ section {
 
 #title-icons a {
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 4vh;
+    height: 4vh;
 }
 
 #title-icons a::after {
@@ -316,12 +316,15 @@ section {
 //#             about                   #
 //#######################################
 
+#root-buttons {
+    display: none;
+}
+
 #about {
     display: block;
     position: relative;
     background: none;
-    justify-content: center;
-    height: auto;
+    height: 100%;
 }
 
 /* 
@@ -359,12 +362,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .section-title {
-    margin: 40px 0 30px 0;
-    padding: 40px 0;
-    border-bottom: 8px solid red;
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 3px solid red;
     align-self: flex-start;
 
 }
@@ -373,19 +377,25 @@ section {
     width: 100%;
     font-family: "ProximaBold";
     color: red;
-    font-size: 8rem;
+    font-size: 3.5vh;
     text-transform: capitalize;
-    margin: 30px 0 20px 0;
+    margin: 10px 0 10px 0;
     display: inline-block;
     text-align: center;
-    line-height: 50px;
+    line-height: 4.5vh;
 }
 
 .paragraphs {
-    margin: 10px 0px 80px 0;
+    margin: 10px 0 0 0;
+    flex-grow: 1;
 }
 
-.paragraphs .pc {
+.paragraphs p:first-child {
+    margin: 10px 0px 10px 0;
+}
+
+.paragraphs .pc,
+.paragraphs .ipad {
     display: none;
 }
 
@@ -394,11 +404,15 @@ section {
     width: 100%;
     font-family: "ProximaReg";
     color: black;
-    font-size: 4.5rem;
-    margin: 35px 0 10px 0;
+    font-size: 3.5vh;
+    margin: 30px 0 10px 0;
     display: inline-block;
     text-align: left;
-    line-height: 80px;
+    line-height: 4.5vh;
+}
+
+#get-resume {
+    margin: 20px;
 }
 
 //#######################################
@@ -458,7 +472,7 @@ section {
 
     #about {
         width: 50%;
-        heigth: 70%;
+        height: 70%;
         align-self: center;
     }
 
@@ -582,4 +596,14 @@ section {
         line-height: 80px;
     }
 
+}
+
+@media all and (min-width: 1200px) {
+    .paragraphs .pc {
+        display: inline;
+    }
+
+    #home-about .paragraphs {
+        margin-top: 35px;
+    }
 }
