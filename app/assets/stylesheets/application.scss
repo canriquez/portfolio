@@ -40,6 +40,8 @@
 
 html,
 body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     height: 100%;
     font-size: 14px;
 }
@@ -76,10 +78,10 @@ section {
 .btn-general {
     font-family: "ProximaReg", san-serif;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 0 6px;
-    padding: 12px 45px 12px 45px;
+    padding: 12px 30px 12px 30px;
     transition: all .5s;
 }
 
@@ -109,8 +111,16 @@ section {
 //#             HOME                    #
 //#######################################
 
-#home {
+#root-home {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
     position: relative;
+}
+
+#home,
+#root-home {
+    width: 100%;
     background: none;
     height: 100%;
 }
@@ -132,15 +142,17 @@ section {
 
 #title-overlay {
     background-color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     position: absolute;
+    width: auto;
     top: 0;
     bottom: 0;
     z-index: -1;
 }
 
 #home-title {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -161,7 +173,7 @@ section {
     width: 100%;
     font-family: "ProximaBold";
     color: black;
-    font-size: 100px;
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 0;
     display: inline-block;
@@ -172,23 +184,23 @@ section {
     width: 100%;
     font-family: "ProximaThin";
     color: black;
-    font-size: 55px;
+    font-size: 1.2rem;
     text-transform: capitalize;
-    margin: 35px 0 10px 0;
+    margin: 25px 0 15px 0;
     display: inline-block;
     text-align: center;
-    line-height: 75px;
+    line-height: 20px;
 }
 
 #title-details h4 {
     width: 100%;
     font-family: "ProximaThin";
     color: black;
-    font-size: 55px;
-    margin: 30px 0 40px 0;
+    font-size: 1.1rem;
+    margin: 10px 0 10px 0;
     display: inline-block;
     text-align: center;
-    line-height: 50px;
+    line-height: 14px;
 
 }
 
@@ -198,8 +210,8 @@ section {
 }
 
 #title-icons {
-    margin: 40px 0 80px 0;
-    width: 80%;
+    margin: 20px 0 10px 0;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -208,8 +220,8 @@ section {
 
 #title-icons a {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 24px;
+    height: 24px;
 }
 
 #title-icons a::after {
@@ -267,8 +279,8 @@ section {
     position: absolute;
     bottom: 3%;
     left: 50%;
-    width: 60px;
-    height: 60px;
+    width: 1.5rem;
+    height: 1.5rem;
     transform: translateX(-50%);
 }
 
@@ -305,10 +317,11 @@ section {
 //#######################################
 
 #about {
+    display: block;
     position: relative;
     background: none;
     justify-content: center;
-    height: 100%;
+    height: auto;
 }
 
 /* 
@@ -386,4 +399,187 @@ section {
     display: inline-block;
     text-align: left;
     line-height: 80px;
+}
+
+//#######################################
+//#        project-container            #
+//#######################################
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden
+}
+
+//#######################################
+//#             projects                #
+//#######################################
+
+#projects {
+    margin: 30px 20px 30px 20px;
+    display: block;
+    position: relative;
+    background: none;
+    justify-content: center;
+    height: auto;
+}
+
+
+//###################################################
+//#             about media query                   #
+//###################################################
+
+@media all and (min-width: 768px) {
+    #root-home {
+        position: relative;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+
+    #contact-me,
+    #get-resume {
+        display: none;
+    }
+
+
+    #home {
+        width: 50%;
+        height: 70%;
+        align-self: center;
+    }
+
+    #about {
+        width: 50%;
+        heigth: 70%;
+        align-self: center;
+    }
+
+    #root-buttons {
+        width: 100%;
+    }
+
+    #main-title {
+        margin-top: 40%;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    #main-title h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    #main-title h3 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        padding: 0;
+        width: 100;
+        text-align: left;
+
+    }
+
+    #main-title h4 {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    #title-icons {
+        margin-top: 50px;
+        width: 80%;
+        align-self: center;
+    }
+
+    #title-icons a {
+        margin-top: 20%;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #contact-me {
+        margin-top: 10%;
+        align-self: center;
+    }
+
+    //########### about media ############
+
+    #home-about {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .section-title {
+        margin-top: 10px;
+        align-self: center;
+        padding-bottom: 6px;
+    }
+
+    .section-title h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #home-about .paragraphs {
+        margin-bottom: 0px;
+    }
+
+    #home-about .paragraphs p {
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+
+    .paragraphs .mobile {
+        font-family: "ProximaThin";
+        font-size: 5.0rem;
+    }
+
+    //########### root buttons ############
+
+    #root-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+    #main-title {
+        margin-top: 10%;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    .section-title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        align-self: center;
+        padding-bottom: 6px;
+    }
+
+    .section-title h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #home-about .paragraphs p:first-child {
+        margin-top: 15px;
+    }
+
+    .paragraphs .mobile {
+        font-family: "ProximaThin";
+        font-size: 4.0rem;
+        margin: 20px 0 10px 0;
+        display: inline-block;
+        text-align: left;
+        line-height: 80px;
+    }
+
 }
