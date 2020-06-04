@@ -14,6 +14,18 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'owl.carousel';
+@import 'owl.theme.default';
+
+//***************************
+//**      OWL Carousel    ***
+//***************************
+
+.owl-carousel {
+    // touch-action: manipulation;
+}
+
+
 
 //***************************
 //**      FONTS           ***
@@ -175,7 +187,7 @@ section {
 
 .base-section {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -577,10 +589,11 @@ section {
 .project-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     height: 80vh;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-left: 2.5%;
     padding: 20px;
     background-color: #fff;
     border-radius: 4px;

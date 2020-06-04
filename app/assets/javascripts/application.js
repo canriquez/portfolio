@@ -13,7 +13,27 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+/*
+ *= require_tree .
+ *= require_self
+ */
 
 //= require jquery
 //= require bootstrap-sprockets
+//= require owl.carousel
+
+document.addEventListener("turbolinks:load", function () {
+    $("#projects-carousel").owlCarousel({
+        loop: true,
+        autoplayHoverPause: true,
+        margin: 10,
+        items: 1,
+        autoplay: true,
+        smartSpeed: 1500
+    })
+    console.log("test");
+});
+
+document.addEventListener("turbolinks:before-cache", function () {
+    $('#projects-carousel').owlCarousel('destroy');
+});
