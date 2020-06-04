@@ -110,9 +110,9 @@ section {
     color: black;
 
     border-radius: 5px;
-    //border: 1px solid black;
     padding: 8px;
     margin: 6px;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
 }
 
 .button-area .btn-project span {
@@ -179,7 +179,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: auto;
 }
 
 //#######################################
@@ -297,6 +297,11 @@ section {
     position: relative;
     width: 4vh;
     height: 4vh;
+    transition: all 200ms ease-in-out;
+}
+
+#title-icons a:hover {
+    transform: translateY(8px);
 }
 
 #title-icons a::after {
@@ -392,18 +397,43 @@ section {
 }
 
 //#######################################
-//#           tech tags                 #
+//#      tech tags / award tag      #
 //#######################################
-
 
 .tag {
     display: inline-block;
     width: 3rem;
     height: 1.5rem;
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
 }
 
-.tag:hover {}
+.tag:hover {
+    transform: translateY(8px);
+}
+
+.award-batch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+}
+
+.award-batch span {
+    margin: 3px 6px;
+}
+
+.tag-award {
+    display: inline-block;
+    -webkit-mask: url(tag-award.svg) no-repeat 100% 100%;
+    mask: url(tag-award.svg) no-repeat 100% 100%;
+    background-color: gold;
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+    z-index: 1;
+}
+
 
 .tag-php {
     background: url("tag-php.svg") no-repeat;
@@ -539,6 +569,7 @@ section {
     margin: 20px;
 }
 
+
 //#######################################
 //#        project-container            #
 //#######################################
@@ -563,10 +594,21 @@ section {
     margin-top: 0;
 }
 
-.project-container .left-side {
+.left-side .paragraphs p {
+    font-size: 3vh;
+    line-height: 3.5vh;
+
+}
+
+.project-container .left-side,
+.project-container .right-side {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+}
+
+.project-container .right-side {
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .left-side .button-area {
@@ -579,16 +621,17 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 30vh;
+    //height: 30vh;
 }
 
 .right-side .app-picture img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    display: block;
     z-index: 1;
     width: 100%;
+}
+
+.right-side .award-batch {
+    margin-bottom: 20px;
 }
 
 .right-side .tech {
@@ -609,7 +652,7 @@ section {
 
 
 //###################################################
-//#             about media query                   #
+//#            mid-screen media query               #
 //###################################################
 
 @media all and (min-width: 768px) {
@@ -724,7 +767,66 @@ section {
         justify-content: space-around;
     }
 
+    //######### projects section ###################
+
+    section #projects {
+        height: auto;
+    }
+
+    .project-title h3 {
+        font-size: 3.5vw;
+        font-family: "ProximaBold";
+    }
+
+    .project-title h3,
+    .left-side .paragraphs,
+    .left-side .paragraphs p:first-child {
+        margin-top: 10px;
+    }
+
+    .left-side .paragraphs p {
+        font-size: 2.8vw;
+        line-height: 4.5vh;
+    }
+
+    .project-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .project-container .left-side {
+        width: 46%;
+    }
+
+
+    .project-container .right-side {
+        width: 49%;
+        justify-content: center;
+    }
+
+
+    .project-container .button-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .tag {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .right-side .app-picture {
+        height: auto;
+        margin: 30px 0px;
+    }
+
 }
+
+//###################################################
+//#            big-screen media query               #
+//###################################################
 
 @media all and (min-width: 768px) and (orientation: landscape) {
     #main-title {
@@ -761,6 +863,10 @@ section {
 
 }
 
+//###################################################
+//#            X-big-screen media query             #
+//###################################################
+
 @media all and (min-width: 1200px) {
     .paragraphs .pc {
         display: inline;
@@ -768,5 +874,35 @@ section {
 
     #home-about .paragraphs {
         margin-top: 35px;
+    }
+
+    //######### projects section ###################
+
+    .left-side .paragraphs p {
+        font-size: 2.8vw;
+        line-height: 6vh;
+    }
+
+    .btn-project {
+        font-size: 2vw;
+        margin-left: 3vw;
+    }
+
+    .award-batch span {
+        margin: 3px 6px;
+        font-size: 2vw;
+    }
+
+    .tag {
+        width: 6rem;
+        height: 3rem;
+        margin: 6px;
+    }
+
+
+    .tag-award {
+        height: 4rem;
+        width: 4rem;
+        margin-left: 3px;
     }
 }
