@@ -97,6 +97,72 @@ section {
     border: 1px solid gray;
 }
 
+//##### project buttons #####
+
+.btn-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.9rem;
+    font-family: "ProximaBold", san-serif;
+    text-transform: capitalize;
+    color: black;
+
+    border-radius: 5px;
+    //border: 1px solid black;
+    padding: 8px;
+    margin: 6px;
+}
+
+.button-area .btn-project span {
+    position: relative;
+    display: inline-block;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin-right: 8px;
+}
+
+.btn-project span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.btn-project:hover,
+.btn-project:focus {
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.btn-project .btn-1::after {
+    -webkit-mask: url(link_1.svg) no-repeat 100% 100%;
+    mask: url(link_1.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+.btn-project .btn-2::after {
+    -webkit-mask: url(case_1.svg) no-repeat 100% 100%;
+    mask: url(case_1.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+
+.btn-project span:hover::after,
+.btn-project span:focus::after {
+    background-color: white;
+}
+
+
 //#######################################
 //#             boxes                   #
 //#######################################
@@ -105,6 +171,15 @@ section {
     display: block;
     margin: 20px 10px 20px 10px;
     padding: 5px;
+}
+
+.base-section {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 //#######################################
@@ -275,7 +350,8 @@ section {
 //#######################################
 
 
-#move-down {
+#move-down,
+#root-move-down {
     position: absolute;
     bottom: 3%;
     left: 50%;
@@ -293,9 +369,10 @@ section {
     height: 100%;
 }
 
-#move-down #arrow-down::after {
+#move-down #arrow-down::after,
+#root-move-down #arrow-down-root::after {
     -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
+    mask: url(arrow_down.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -303,14 +380,61 @@ section {
 }
 
 #move-down #arrow-down:hover::after,
-#move-down #arrow-down:focus::after {
+#move-down #arrow-down:focus::after,
+#root-move-down #arrow-down-root:hover::after,
+#root-move-down #arrow-down-root:focus::after {
     -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
+    mask: url(arrow_down.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 
 }
+
+//#######################################
+//#           tech tags                 #
+//#######################################
+
+
+.tag {
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+}
+
+.tag:hover {}
+
+.tag-php {
+    background: url("tag-php.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-jquery {
+    background: url("tag-jquery.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-html5 {
+    background: url("tag-html5.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-css3 {
+    background: url("tag-css3.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-boots {
+    background: url("tag-boots.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-mysql {
+    background: url("tag-mysql.svg") no-repeat;
+    z-index: 1;
+}
+
 
 //#######################################
 //#             about                   #
@@ -408,7 +532,7 @@ section {
     margin: 30px 0 10px 0;
     display: inline-block;
     text-align: left;
-    line-height: 4.5vh;
+    line-height: 4.0vh;
 }
 
 #get-resume {
@@ -422,27 +546,65 @@ section {
 .project-container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 60px;
+    height: 80vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
-    overflow: hidden
+    overflow: hidden;
 }
 
-//#######################################
-//#             projects                #
-//#######################################
+.project-title h3,
+.left-side .paragraphs,
+.left-side .paragraphs p:first-child {
+    margin-top: 0;
+}
 
-#projects {
-    margin: 30px 20px 30px 20px;
-    display: block;
+.project-container .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left-side .button-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.right-side .app-picture {
     position: relative;
-    background: none;
-    justify-content: center;
-    height: auto;
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+}
+
+.right-side .app-picture img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    width: 100%;
+}
+
+.right-side .tech {
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+}
+
+.button-area {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 
@@ -459,7 +621,8 @@ section {
 
 
     #contact-me,
-    #get-resume {
+    #get-resume,
+    #move-down {
         display: none;
     }
 

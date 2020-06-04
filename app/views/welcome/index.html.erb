@@ -7,7 +7,7 @@
         <div id="title-heading">
           <h1 id="title-heading-1">web developer</h1>
           <h1 id="title-heading-2">engineering</h1>
-          <h1 id="title-heading-3"><span class="key">family</span> man</h1>
+          <h1 id="title-heading-3"><span class="key">management</span></h1>
         </div>
         <div id="title-sub-heading">
           <h3>formerly head of mobile access engineering @telefonica_de</h3>
@@ -32,17 +32,17 @@
     </div>
   </section>
   <!-- space -->
-  <section id="about">
+  <section id="about" class="base-section">
     <div id="home-about">
       <div class="section-title">
         <h1>About me</h1>
       </div>
       <div class="paragraphs">
-        <p class="mobile pc">Technology, Electronics, and the beauty of simple engineering solutions is my passion.</p>
+        <p class="mobile pc">Technology, Electronics, and the beauty of simple engineering solutions are my passion.</p>
         <p class="pc"><br>
           <br>
           Life brought change and excellent opportunities in the telecom industry. I managed small projects, big projects, and later great teams.</p>
-        <p class="mobile ipad"> Telecoms brought me to work with great people across 13 countries and the chance to live in big cities like Buenos Aires, London, and Munich.</p>
+        <p class="mobile ipad"> Telecoms allowed me to work with great people across 13 countries and the chance to live in big cities like Buenos Aires, London, and Munich.</p>
         <p class="mobile pc">After 17 years in telecom, I have now started my adventure in the software development industry, and I am loving it. </p>
       </div>
       <div id="get-resume">
@@ -54,37 +54,59 @@
     <div id="contact-me-root">
       <a class="btn btn-general btn-home" href="#" title="Contact Me Now" role="button">Contact Me Now</a>
     </div>
-    <div id="contact-me-root">
+    <div id="root-move-down">
+      <a id="arrow-down-root" href="#projects"></a>
+    </div>
+    <div id="resume-me-root">
       <a class="btn btn-general btn-home" href="#" title="Get my resume" role="button">Get my resume</a>
     </div>
   </div>
 </div>
-<section id="projects">
+<section id="projects" class="base-section">
+  <div class="section-title">
+    <h1>Selected projects</h1>
+  </div>
   <div class="project-container">
     <!-- project left side -->
     <div class="left-side">
-      Left side content
       <div class="project-title">
-        <h3>HTML/CSS Capstone</h3>
+        <h3>RAYCES.COM</h3>
       </div>
       <div class="paragraphs">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iure cupiditate ipsam tenetur delectus. Laboriosam deserunt repudiandae numquam, odio nulla, earum at autem nam aliquid, totam animi sint ab porro.</p>
-      </div>
-      <div class="button-area">
-        <a href="">
-          <button class="btn btn-general btn-home">
-            <i>icon</i>
-            Repository
-          </button>
-        </a>
+        <p>Complete responsive web site design and implementation.</p>
+        <p>Interfacing the customer in all required steps (Wireframing, design and implementation)</p>
       </div>
     </div>
-    <!-- project left side -->
-    <div class="col-sm-6">
-      Right side content
-      <div class="batch"></div>
-      <div class="trech"></div>
-      <div class="picture"></div>
+    <!-- project right side -->
+    <div class="right-side">
+      <div class="top-row">
+        <div class="tech">
+          <span class="tag tag-html5"></span>
+          <span class="tag tag-css3"></span>
+          <span class="tag tag-boots"></span>
+          <span class="tag tag-php"></span>
+          <span class="tag tag-jquery"></span>
+          <span class="tag tag-mysql"></span>
+        </div>
+      </div>
+      <div class="app-picture">
+        <img src="<%= asset_path('project_01.jpg') %>" alt="project_01 image">
+      </div>
+      <div class="batch">Highlight</div>
+    </div>
+    <div class="button-area">
+      <a href="#projects">
+        <button class="btn btn-project">
+          <span class="btn-1"></span>
+          Live Site
+        </button>
+      </a>
+      <a href="#projects">
+        <button class="btn btn-project">
+          <span class="btn-2"></span>
+          Case Study
+        </button>
+      </a>
     </div>
   </div>
 </section>
