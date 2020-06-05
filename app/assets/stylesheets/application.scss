@@ -187,7 +187,7 @@ section {
 
 .base-section {
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -534,21 +534,21 @@ section {
 .section-title {
     margin: 0;
     padding: 5px 0;
-    border-bottom: 3px solid red;
     align-self: flex-start;
 
 }
 
 .section-title h1 {
-    width: 100%;
+    //width: 100%;
     font-family: "ProximaBold";
     color: red;
     font-size: 3.5vh;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin: 10px 0 10px 0;
     display: inline-block;
     text-align: center;
     line-height: 4.5vh;
+    border-bottom: 3px solid red;
 }
 
 .paragraphs {
@@ -748,7 +748,7 @@ section {
         margin-right: 5px;
     }
 
-    .section-title {
+    /*     .section-title {
         margin-top: 10px;
         align-self: center;
         padding-bottom: 6px;
@@ -757,7 +757,7 @@ section {
     .section-title h1 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
-    }
+    } */
 
     #home-about .paragraphs {
         margin-bottom: 0px;
@@ -892,18 +892,18 @@ section {
     //######### projects section ###################
 
     .left-side .paragraphs p {
-        font-size: 2.8vw;
-        line-height: 6vh;
+        font-size: 2.2vw;
+        line-height: 3vw;
     }
 
     .btn-project {
-        font-size: 2vw;
+        font-size: 1.5vw;
         margin-left: 3vw;
     }
 
     .award-batch span {
         margin: 3px 6px;
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
 
     .tag {
