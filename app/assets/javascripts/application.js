@@ -29,7 +29,8 @@ document.addEventListener("turbolinks:load", function () {
         margin: 10,
         items: 1,
         autoplay: true,
-        smartSpeed: 2500
+        smartSpeed: 700,
+        autoplayTimeout: 5000
     })
     console.log("test");
 });

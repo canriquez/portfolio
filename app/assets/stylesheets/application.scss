@@ -174,6 +174,108 @@ section {
     background-color: white;
 }
 
+//#######################################
+//#           ICONS                     #
+//#######################################
+
+//################# Title Icons #############
+
+
+#title-icons {
+    margin: 20px 0 10px 0;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#title-icons a {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    transition: all 200ms ease-in-out;
+}
+
+#title-icons a:hover {
+    transform: translateY(8px);
+}
+
+#title-icons a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+}
+
+#title-icons #git::after {
+    -webkit-mask: url(git.svg) no-repeat 100% 100%;
+    mask: url(git.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+#title-icons #lin::after {
+    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
+    mask: url(lin.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+#title-icons #twi::after {
+    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
+    mask: url(twi.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+#title-icons #sts::after {
+    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
+    mask: url(sts.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+//############### skills icons #########
+
+.head-icon span {
+    position: relative;
+    display: inline-block;
+    width: 7vh;
+    height: 7vh;
+    transition: all 200ms ease-in-out;
+    margin: 3vh;
+}
+
+.head-title {}
+
+.head-icon span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+}
+
+.head-icon #skill-software::after {
+    -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
+    mask: url(skill_radio.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+
+}
+
+
 
 //#######################################
 //#             boxes                   #
@@ -294,67 +396,6 @@ section {
 
 #title-heading .key {
     color: blue;
-}
-
-#title-icons {
-    margin: 20px 0 10px 0;
-    width: 70vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-#title-icons a {
-    position: relative;
-    width: 4vh;
-    height: 4vh;
-    transition: all 200ms ease-in-out;
-}
-
-#title-icons a:hover {
-    transform: translateY(8px);
-}
-
-#title-icons a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-#title-icons #git::after {
-    -webkit-mask: url(git.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: gray;
-}
-
-#title-icons #lin::after {
-    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
-    mask: url(lin.svg) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: gray;
-}
-
-#title-icons #twi::after {
-    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
-    mask: url(twi.svg) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: gray;
-}
-
-#title-icons #sts::after {
-    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
-    mask: url(sts.svg) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: gray;
 }
 
 
@@ -663,6 +704,62 @@ section {
     justify-content: space-between;
 }
 
+//#######################################
+//#        Skills Section               #
+//#######################################
+
+
+.skills-column {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.skills-column .head-title h2 {
+    font-family: "ProximaBold";
+    color: black;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills-column .skill-text p {
+    width: 80%;
+    font-family: "ProximaReg";
+    font-size: 2.5vh;
+    color: black;
+    line-height: 4vh;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.skills-column .head-sub-title h3 {
+    margin: 2vh auto;
+    font-family: "ProximaBold";
+    color: black;
+    font-size: 3.5vh;
+    text-transform: capitalise;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills-column ul {
+    list-style: none;
+    font-family: "ProximaThin";
+    font-size: 2.8vh;
+    line-height: 4.5vh;
+    padding: 0;
+    text-align: center;
+}
+
+
+
 
 //###################################################
 //#            mid-screen media query               #
@@ -734,6 +831,11 @@ section {
         margin-top: 20%;
         width: 3rem;
         height: 3rem;
+
+    }
+
+    #title-icons a::after {
+        padding: 22px;
     }
 
     #contact-me {
