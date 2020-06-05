@@ -251,7 +251,7 @@ section {
     width: 7vh;
     height: 7vh;
     transition: all 200ms ease-in-out;
-    margin: 3vh;
+    margin: 2vh;
 }
 
 .head-title {}
@@ -265,14 +265,31 @@ section {
     height: 98%;
 }
 
-.head-icon #skill-software::after {
+.head-icon #skill-electronics::after {
     -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
     mask: url(skill_radio.svg) no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
+}
 
+.head-icon #skill-software::after {
+    -webkit-mask: url(skill_software.svg) no-repeat 100% 100%;
+    mask: url(skill_software.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+}
+
+.head-icon #skill-management::after {
+    -webkit-mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
 }
 
 
@@ -710,12 +727,17 @@ section {
 
 
 .skills-column {
-    margin: 0 auto;
-    width: 90%;
+    height: 85vh;
+    margin: 4vh auto;
+    padding: 5px;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+    overflow: hidden;
 
 }
 
@@ -732,10 +754,10 @@ section {
 .skills-column .skill-text p {
     width: 80%;
     font-family: "ProximaReg";
-    font-size: 2.5vh;
+    font-size: 2.3vh;
     color: black;
-    line-height: 4vh;
-    margin: 2vh auto;
+    line-height: 3.5vh;
+    margin: 1.4vh auto;
     text-align: center;
 }
 
@@ -751,15 +773,31 @@ section {
 
 .skills-column ul {
     list-style: none;
-    font-family: "ProximaThin";
-    font-size: 2.8vh;
+    font-family: "ProximaReg";
+    font-size: 2.5vh;
     line-height: 4.5vh;
     padding: 0;
     text-align: center;
 }
 
+.skills-column ul .note {
+    margin: 20px auto;
+    font-family: "ProximaThin";
+    font-size: 2vh;
 
+}
 
+//###################################################
+//#           XS- screen media query               #
+//###################################################
+
+@media all and (max-width: 320px) {
+    .skills-column {
+        height: 80vh;
+        margin: 2vh auto;
+        padding: 2vh;
+    }
+}
 
 //###################################################
 //#            mid-screen media query               #
