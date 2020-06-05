@@ -727,9 +727,10 @@ section {
 
 
 .skills-column {
+    position: relative;
     height: 85vh;
     margin: 4vh auto;
-    padding: 5px;
+    padding: 2vh;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -738,7 +739,6 @@ section {
     border-radius: 4px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
     overflow: hidden;
-
 }
 
 .skills-column .head-title h2 {
@@ -752,7 +752,7 @@ section {
 }
 
 .skills-column .skill-text p {
-    width: 80%;
+    width: 90%;
     font-family: "ProximaReg";
     font-size: 2.3vh;
     color: black;
@@ -765,7 +765,7 @@ section {
     margin: 2vh auto;
     font-family: "ProximaBold";
     color: black;
-    font-size: 3.5vh;
+    font-size: 3vh;
     text-transform: capitalise;
     display: inline-block;
     text-align: center;
@@ -780,11 +780,64 @@ section {
     text-align: center;
 }
 
-.skills-column ul .note {
-    margin: 20px auto;
-    font-family: "ProximaThin";
-    font-size: 2vh;
+.skills-column ul li {
+    position: relative;
+}
 
+#software ul li:nth-child(4)::after {
+    content: "1";
+    position: absolute;
+    top: -3px;
+    right: -4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(1)::after {
+    content: "1";
+    position: absolute;
+    top: -3px;
+    right: 4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(2)::after {
+    content: "2";
+    position: absolute;
+    top: -3px;
+    right: -4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(3)::after,
+    {
+    content: "3";
+    position: absolute;
+    top: -3px;
+    right: 10%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(4)::after {
+    content: "3";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+.skills-column ul .note {
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "ProximaThin";
+    font-size: 1.8vh;
 }
 
 //###################################################
@@ -975,6 +1028,17 @@ section {
         margin: 30px 0px;
     }
 
+
+    //########## skills section ######
+
+    .skills-column {
+        justify-content: flex-start;
+    }
+
+    .skills-column .head-title h2 {
+        margin: 4vh 0;
+    }
+
 }
 
 //###################################################
@@ -1013,6 +1077,47 @@ section {
         text-align: left;
         line-height: 80px;
     }
+
+    //############## skills section ###########
+
+    #skills-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+        justify-content: center;
+        height: 90vh;
+    }
+
+    .skills-column {
+        height: 85vh;
+        margin: 2vh auto;
+        padding: 1vh;
+        width: 95%;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .skills-column:nth-child(2) {
+        border-left: solid 0.5px;
+        border-right: solid 0.5px;
+        border-color: #DCDCDC;
+
+    }
+
+    .skills-column .head-sub-title h3 {
+        // margin: 1vh auto;
+        margin: 4vh 0;
+        font-size: 2.8vh;
+    }
+
+    .skills-column ul {
+        line-height: 3.6vh;
+    }
+
 
 }
 
@@ -1057,5 +1162,11 @@ section {
         height: 4rem;
         width: 4rem;
         margin-left: 3px;
+    }
+
+    //############ skills section ########
+
+    .skills-column .head-title h2 {
+        margin: 4vh 0;
     }
 }
