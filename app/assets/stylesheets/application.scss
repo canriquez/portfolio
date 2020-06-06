@@ -292,6 +292,45 @@ section {
     z-index: 1;
 }
 
+//############### quotation icons #########
+
+.quote span {
+    position: relative;
+    display: inline-block;
+    width: 3vh;
+    height: 3vh;
+    transition: all 200ms ease-in-out;
+    margin: 1vh;
+}
+
+.quote span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 98%;
+}
+
+.quote .left-quote::after {
+    -webkit-mask: url(left-quote.svg) no-repeat 100% 100%;
+    mask: url(left-quote.svg) no-repeat 100% 100%;
+    background-color: white;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.quote .right-quote::after {
+    -webkit-mask: url(right-quote.svg) no-repeat 100% 100%;
+    mask: url(right-quote.svg) no-repeat 100% 100%;
+    background-color: white;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
 
 
 //#######################################
@@ -305,12 +344,17 @@ section {
 }
 
 .base-section {
-    margin: 0 auto;
+    margin: 40px auto;
     width: 90%;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     height: auto;
+    box-sizing: border-box;
+}
+
+.section-content {
+    margin: 40px auto;
 }
 
 //#######################################
@@ -839,6 +883,48 @@ section {
     font-family: "ProximaThin";
     font-size: 1.8vh;
 }
+
+//#######################################
+//#        Quote Section               #
+//#######################################
+
+#quote-section {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#quote-section .section-content {
+    position: relative;
+    height: 35vh;
+    background-image: url("quote_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {}
+
+.quote p {
+    font-family: "ProximaBold";
+    font-size: 2.8vh;
+    line-height: 6.5vh;
+    text-align: center;
+    color: white;
+}
+
+.quote h4 {
+    font-family: "ProximaBold";
+    font-size: 2.5vh;
+    line-height: 5.5vh;
+    text-align: center;
+    color: white;
+}
+
 
 //###################################################
 //#           XS- screen media query               #
