@@ -1,7 +1,7 @@
 module ApplicationHelper
 require 'date'
 
-    def howlong(date)
+    def post_age(date)
         current_day = DateTime.now 
         converted = Date::strptime(date, "%d-%m-%Y")
         diff = TimeDifference.between(converted, current_day).in_seconds
