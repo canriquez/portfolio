@@ -890,8 +890,7 @@ section {
 
 #quote-section {
     width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin: 60px 0;
 }
 
 #quote-section .section-content {
@@ -907,11 +906,14 @@ section {
     align-items: center;
 }
 
-.quote {}
+.quote {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.4);
+}
 
 .quote p {
     font-family: "ProximaBold";
-    font-size: 2.8vh;
+    font-size: 3vh;
     line-height: 6.5vh;
     text-align: center;
     color: white;
@@ -936,6 +938,15 @@ section {
         margin: 2vh auto;
         padding: 2vh;
     }
+
+    //##### quote-section
+
+
+    .quote p {
+        font-size: 3.5vh;
+        line-height: 6.5vh;
+    }
+
 }
 
 //###################################################
@@ -1123,6 +1134,17 @@ section {
 
     .skills-column .head-title h2 {
         margin: 4vh 0;
+    }
+
+    //##### quote-section
+
+    .quote {
+        padding: 1vh;
+    }
+
+    .quote p {
+        font-size: 4vh;
+        line-height: 6.5vh;
     }
 
 }
