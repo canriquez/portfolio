@@ -31,10 +31,29 @@ document.addEventListener("turbolinks:load", function () {
         autoplay: true,
         smartSpeed: 700,
         autoplayTimeout: 5000
-    })
+    });
+    $("#pub-caroucel").owlCarousel({
+        loop: false,
+        margin: 10,
+        items: 1,
+        smartSpeed: 700,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+            1000: {
+                items: 5,
+                nav: true
+            }
+        }
+    });
     console.log("test");
 });
 
 document.addEventListener("turbolinks:before-cache", function () {
     $('#projects-carousel').owlCarousel('destroy');
+    $('#pub-caroucel').owlCarousel('destroy');
 });

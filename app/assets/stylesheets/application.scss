@@ -31,6 +31,8 @@
 //**      FONTS           ***
 //***************************
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
 @font-face {
     font-family: "ProximaThin";
     src: url("proxima/ProximaNovaThin.otf") format("opentype");
@@ -885,7 +887,7 @@ section {
 }
 
 //#######################################
-//#        Quote Section               #
+//#        Quote Section                #
 //#######################################
 
 #quote-section {
@@ -926,6 +928,82 @@ section {
     text-align: center;
     color: white;
 }
+
+//#######################################
+//#        publications                 #
+//#######################################
+
+.storycard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 85vw;
+    margin: 0 auto;
+    height: 70vh;
+    box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.58);
+    overflow: hidden;
+
+
+    .head-picture {
+        position: relative;
+        background: url("https://hackernoon.com/drafts/2x20361b.png");
+        background-size: cover;
+        height: 40%;
+
+        .picture-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 10px;
+            color: white;
+        }
+
+    }
+
+    .story-title {
+        margin: 2vh;
+    }
+
+    .story-short {
+        margin: 2vh;
+    }
+
+    .story-bottom {
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+        background: #CDCDCD;
+
+        .status {
+            margin-left: 1vh;
+            border: solid 1px;
+            border-color: rgb(24, 177, 2);
+            background-color: rgb(24, 177, 2);
+            padding: 1px 4px;
+            color: white;
+            border-radius: 5px;
+            font-size: 2vh;
+        }
+
+        .when {
+            font-family: "ProximaThin";
+            color: black;
+            font-size: 2.5vh;
+            padding: 5px;
+        }
+
+    }
+}
+
+
+
 
 
 //###################################################
