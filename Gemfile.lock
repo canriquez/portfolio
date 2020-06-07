@@ -69,6 +69,8 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    chronic_duration (0.10.6)
+      numerizer (~> 0.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -112,6 +114,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    numerizer (0.1.1)
     owlcarousel-rails (2.2.3.5)
     public_suffix (4.0.5)
     puma (3.12.6)
@@ -186,6 +189,8 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    time_difference (0.7.0)
+      activesupport (~> 5.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -213,6 +218,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chromedriver-helper
+  chronic_duration (~> 0.10.6)
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
@@ -226,6 +232,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  time_difference
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

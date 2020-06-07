@@ -15,6 +15,8 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem 'owlcarousel-rails'
+gem 'time_difference'
+gem 'chronic_duration', '~> 0.10.6'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
