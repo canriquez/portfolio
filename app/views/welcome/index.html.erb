@@ -299,7 +299,7 @@
   <div class="small-form">
     <form id="contact-form">
       <h3>Send a message</h3>
-      <p>I will be great if you could fill this form. I will get back. Thanks!</p>
+      <p>If you want to get in touch, please send me a message using this form.</p>
       <div class="row">
         <div class="col-md-6 col-sm-6">
           <div class="form-group">
@@ -322,7 +322,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="g-recaptcha" data-sitekey="6LcN8WcUAAAAAGvddQduxmW5Yjf237aKF3m1CFDB" data-callback="recaptchaCallback"></div>
+          <div class="g-recaptcha" data-sitekey="6LdJkwEVAAAAACbG-mtK0v_8kVdI7ENINRRi4GIr" data-callback="recaptchaCallback"></div>
           <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
         </div>
       </div>
@@ -336,6 +336,20 @@
     </form>
   </div>
 </section>
+<div id="modals">
+  <div id="modal-confirmation" class="card text-center">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="confirmation-svg">
+        <span></span>
+      </div>
+      <div class="card-title">
+      </div>
+      <%= link_to root_path do %>
+        <span class="btn-general btn-home">Go back to page</span>
+      <% end %>
+    </div>
+  </div>
+</div>
 <br>
 <br>
 <br>

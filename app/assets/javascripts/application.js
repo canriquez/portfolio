@@ -60,7 +60,7 @@ document.addEventListener("turbolinks:load", function () {
     });
 
     $("#contact-form").validate({
-        /* ignore: ".ignore", */  // Added for recaptcha validation with jquery validation plugin as indicated in https://stackoverflow.com/questions/29563822/new-recaptcha-with-jquery-validation-plugin
+        ignore: ".ignore",  // Added for recaptcha validation with jquery validation plugin as indicated in https://stackoverflow.com/questions/29563822/new-recaptcha-with-jquery-validation-plugin
         rules: {
             'email': {
                 required: true,
@@ -77,7 +77,7 @@ document.addEventListener("turbolinks:load", function () {
             'message': {
                 required: true,
                 minlength: 5
-            }/* ,
+            },
             'hiddenRecaptcha': {   // Added for recaptcha validation with jquery validation plugin as indicated in https://stackoverflow.com/questions/29563822/new-recaptcha-with-jquery-validation-plugin
                 required: function () {
                     if (grecaptcha.getResponse() == '') {
@@ -86,7 +86,7 @@ document.addEventListener("turbolinks:load", function () {
                         return false;
                     }
                 }
-            } */
+            }
 
         },
         messages: {
@@ -104,11 +104,11 @@ document.addEventListener("turbolinks:load", function () {
             },
             'message': {
                 required: 'Please include a message',
-                minlength: 'Please include <em>at least</em> 2 characters.'
-            }/* ,
+                minlength: 'Please include <em>at least</em> 5 characters.'
+            },
             'hiddenRecaptcha': {
                 required: 'I have to test you are not a robot ;)'
-            } */
+            }
         },
 
         submitHandler: function (form, event) { //Warning: Form and event should go here. event, will help to stop form from submitting when using jQuary validation
@@ -121,15 +121,10 @@ document.addEventListener("turbolinks:load", function () {
             console.log('Contact Form: Executing Submitt after validation form');
             var jData = $('#contact-form'); // Store in Jdata variable the complete form
             console.log(jData.serialize());
-            /* ajaxRequest = $.ajax({
-                type: 'POST', //Obtain the post methodd from the form
-                url: 'bin/contacto_process.php', //COntact email processing php file.
-                data: jData.serialize(), // Serializing jData form information to be sent to PHP
-                dataType: 'JSON',
-                done: function (response) {
-                    console.log('email: Contact form processed. Finally we are at this stage!');
-                }
-            }); */
+            var form_data = $('#contact-form').serializeArray().reduce(function (obj, item) {
+                obj[item.name] = item.value;
+                return obj;
+            }, {});
             Rails.ajax({
                 url: '/contact',
                 type: "POST",
@@ -138,11 +133,20 @@ document.addEventListener("turbolinks:load", function () {
                     console.log(data);
                     console.log('email: Contact form processed. Finally we are at this stage!');
                     $('#contact-form')[0].reset(); // attempt to reset the complete form. (it worked)
-                    console.log('contacto-form process: Worked just fine')
+                    console.log('contacto-form process: Worked just fine');
+                    $("#submit-btn").removeAttr("disabled");
+                    $(".card-title").html('<h5> Dear ' + form_data['name'] + ', thanks for your message!. </h5>');
+                    $("#modals").show();
                 }
             });
         }
-    })
+    });
+
+    $("body").click(function () {
+        if ($("#modals").is(":visible")) {
+            $("#modals").hide();
+        }
+    });
 
 });
 
