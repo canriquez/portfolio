@@ -26,6 +26,25 @@
 }
 
 
+//*****************************
+//**     jQuery Validate    ***
+//*****************************
+
+.form-error {
+    font-family: "ProximaThin";
+    color: #dd4b39;
+    font-size: 2vh;
+}
+
+label .form-error {
+    margin-bottom: 0;
+}
+
+.has-error {
+    margin-bottom: 0;
+}
+
+
 //***************************
 //**      FONTS           ***
 //***************************

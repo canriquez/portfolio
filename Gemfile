@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'owlcarousel-rails'
 gem 'time_difference'
 gem 'chronic_duration', '~> 0.10.6'
+gem 'jquery-validation-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
