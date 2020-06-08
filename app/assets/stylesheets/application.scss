@@ -1043,7 +1043,59 @@ section {
     }
 }
 
+//#######################################
+//#        Contact me                   #
+//#######################################
 
+#get-in-touch {
+    height: 90vh;
+
+    .contact-links {
+        margin: 5vh auto;
+
+        #title-heading h1 {
+            font-size: 3.5vh;
+            text-align: left;
+        }
+
+        #title-icons {
+            text-align: center;
+            margin: 5vh auto;
+            width: 90%;
+        }
+    }
+
+    .small-form {
+        margin-top: 6vh;
+
+        .form-control {
+            height: 5.5vh;
+        }
+
+        h3 {
+            font-size: 4vh;
+        }
+
+        p {
+            font-size: 3vh;
+            line-height: 5vh;
+            margin-bottom: 4vh;
+        }
+
+        form input,
+        #message {
+            margin-top: 2vh;
+            font-size: 2.5vh;
+        }
+
+        #message {
+            height: 10vh;
+        }
+
+
+    }
+
+}
 
 
 
