@@ -137,6 +137,7 @@ document.addEventListener("turbolinks:load", function () {
                     $("#submit-btn").removeAttr("disabled");
                     $(".card-title").html('<h5> Dear ' + form_data['name'] + ', thanks for your message!. </h5>');
                     $("#modals").show();
+                    grecaptcha.reset();
                 }
             });
         }
