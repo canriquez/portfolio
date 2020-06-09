@@ -7,7 +7,7 @@ class ContactController < ApplicationController
         if @contact.save #if we succeed to store the contact
             puts 'We created successfully '
             p @contact
-            ContactMailer.with(contact: @contact).contact_mailer.delever_now
+            ContactMailer.with(contact: @contact).contact_email.deliver_later
         else 
             puts 'failed to create contact'
         end

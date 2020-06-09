@@ -33,4 +33,4 @@
 
 #ignoring enviroment file
 
-/config/environments/$RAILS_ENV.rb
+/config/environments/development.rb
