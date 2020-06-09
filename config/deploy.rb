@@ -25,6 +25,7 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 #set :default_shell, "/bin/bash -l"
 set :rvm_type, :system
+append :linked_files, "config/master.key"
 
 ## Defaults:
 # set :scm,           :git
