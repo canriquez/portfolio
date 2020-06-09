@@ -8,6 +8,7 @@ set :puma_threads,    [5, 5]
 set :puma_workers,    1
 
 # Don't change these unless you know what you're doing
+set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
