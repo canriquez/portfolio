@@ -27,3 +27,5 @@ production:
   encoding: utf8
   database: appname_production
   pool: 5
+  username: <%= ENV['APPNAME_DATABASE_USER'] %>
+  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
