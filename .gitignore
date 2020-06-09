@@ -34,3 +34,6 @@
 #ignoring enviroment file
 
 /config/environments/development.rb
+
+
+/config/master.key
