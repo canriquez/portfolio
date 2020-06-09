@@ -1,5 +1,5 @@
 # Change these
-server '[PRODUCTION_IP]', port: 22, roles: [:web, :app, :db], primary: true
+server '54.157.185.107', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:canriquez/portfolio.git'
 set :application,     'portfolio'
