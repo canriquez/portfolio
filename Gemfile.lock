@@ -182,6 +182,8 @@ GEM
     regexp_parser (1.7.0)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -268,6 +270,7 @@ DEPENDENCIES
   pg (= 0.20.0)
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
+  rvm-capistrano
   sass-rails (~> 5.0)
   sassc-rails (>= 2.1.0)
   selenium-webdriver

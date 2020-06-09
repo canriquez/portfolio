@@ -1,3 +1,6 @@
+#Used to check RVM installation before capistrano production setup
+require "rvm/capistrano"
+
 # Change these
 server '54.157.185.107', port: 22, roles: [:web, :app, :db], primary: true
 
@@ -8,6 +11,16 @@ set :puma_threads,    [5, 5]
 set :puma_workers,    1
 
 # Don't change these unless you know what you're doing
+
+##### RVM capistrano checks on RVM and RUBY installation before capistrano setup
+set :rvm_ruby_string, :local              # use the same ruby as used locally for deployment
+set :rvm_autolibs_flag, "read-only"       # more info: rvm help autolibs
+
+before 'deploy:setup', 'rvm:install_rvm'  # install/update RVM
+before 'deploy:setup', 'rvm:install_ruby' # install Ruby and create gemset, OR:
+# before 'deploy:setup', 'rvm:create_gemset' # only create gemset
+###############
+
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
