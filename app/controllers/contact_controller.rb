@@ -7,6 +7,7 @@ class ContactController < ApplicationController
         if @contact.save #if we succeed to store the contact
             puts 'We created successfully '
             p @contact
+            ContactMailer.with(contact: @contact).contact_mailer.delever_now
         else 
             puts 'failed to create contact'
         end
@@ -18,6 +19,6 @@ class ContactController < ApplicationController
     def contact_params
         puts 'Enrolled a new contact, here are the params :'
         p params
-        params.permit(:name, :email, :message, :subject)
+        params.permit(:name, :email, :message, :subject, "g-recaptcha-response")
       end
 end

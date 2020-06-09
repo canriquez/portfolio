@@ -5,6 +5,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :subject
       t.string :message
+      t.string 'g-recaptcha-response'
 
       t.timestamps
     end
