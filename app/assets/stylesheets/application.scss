@@ -1,0 +1,1773 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'owl.carousel';
+@import 'owl.theme.default';
+
+//***************************
+//**      OWL Carousel    ***
+//***************************
+
+.owl-carousel {
+    // touch-action: manipulation;
+}
+
+
+//*****************************
+//**     jQuery Validate    ***
+//*****************************
+
+.form-error {
+    font-family: "ProximaThin";
+    color: #dd4b39;
+    font-size: 2vh;
+}
+
+label .form-error {
+    margin-bottom: 0;
+}
+
+.has-error {
+    margin-bottom: 0;
+}
+
+
+//***************************
+//**      FONTS           ***
+//***************************
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "ProximaThin";
+    src: url("proxima/ProximaNovaThin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ProximaReg";
+    src: url("proxima/ProximaNovaRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ProximaBold";
+    src: url("proxima/ProximaNovaBold.otf") format("opentype");
+}
+
+//#################################
+//###      html, body           ###
+//#################################
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    font-size: 14px;
+}
+
+body {
+    color: #212226;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "ProximaReg", sans-serif;
+}
+
+p {
+    font-family: "ProximaThin", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+section {
+    background: #fff;
+    //overflow: hidden;
+}
+
+//#######################################
+//#           modal display             #
+//#######################################
+
+#modals {
+    display: none;
+}
+
+#modal-confirmation {
+    display: none;
+    width: 80%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+
+    .card-body a {
+        text-decoration: none;
+    }
+
+    .card-title h5 {
+        margin: 3vh auto;
+        font-family: "ProximaBold", san-serif;
+        font-size: 3vh;
+        transition: all 0.8s;
+        color: black;
+        width: 90%;
+        line-height: 5vh;
+
+    }
+}
+
+//#######################################
+//#            Buttons                  #
+//#######################################
+
+
+.btn-general {
+    font-family: "ProximaReg", san-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 12px 30px 12px 30px;
+    transition: all .5s;
+
+}
+
+.btn-home {
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+}
+
+//##### project buttons #####
+
+.btn-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.9rem;
+    font-family: "ProximaBold", san-serif;
+    text-transform: capitalize;
+    color: black;
+
+    border-radius: 5px;
+    padding: 8px;
+    margin: 6px;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+}
+
+.button-area .btn-project span {
+    position: relative;
+    display: inline-block;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin-right: 8px;
+}
+
+.btn-project span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.btn-project:hover,
+.btn-project:focus {
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.btn-project .btn-1::after {
+    -webkit-mask: url(link_1.svg) no-repeat 100% 100%;
+    mask: url(link_1.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+.btn-project .btn-2::after {
+    -webkit-mask: url(case_1.svg) no-repeat 100% 100%;
+    mask: url(case_1.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+
+.btn-project span:hover::after,
+.btn-project span:focus::after {
+    background-color: white;
+}
+
+//#######################################
+//#           ICONS                     #
+//#######################################
+
+//################# Title Icons #############
+
+
+.title-icons {
+    margin: 20px 0 10px 0;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.title-icons a {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    transition: all 200ms ease-in-out;
+}
+
+.title-icons a:hover {
+    transform: translateY(8px);
+}
+
+.title-icons a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+}
+
+.title-icons #git::after {
+    -webkit-mask: url(git.svg) no-repeat 100% 100%;
+    mask: url(git.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+.title-icons #lin::after {
+    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
+    mask: url(lin.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+.title-icons #twi::after {
+    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
+    mask: url(twi.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+.title-icons #sts::after {
+    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
+    mask: url(sts.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+}
+
+//############### skills icons #########
+
+.head-icon span {
+    position: relative;
+    display: inline-block;
+    width: 7vh;
+    height: 7vh;
+    transition: all 200ms ease-in-out;
+    margin: 2vh;
+}
+
+.head-title {}
+
+.head-icon span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+}
+
+.head-icon #skill-electronics::after {
+    -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
+    mask: url(skill_radio.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+}
+
+.head-icon #skill-software::after {
+    -webkit-mask: url(skill_software.svg) no-repeat 100% 100%;
+    mask: url(skill_software.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+}
+
+.head-icon #skill-management::after {
+    -webkit-mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    background-color: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+}
+
+//############### quotation icons #########
+
+.quote span {
+    position: relative;
+    display: inline-block;
+    width: 3vh;
+    height: 3vh;
+    transition: all 200ms ease-in-out;
+    margin: 1vh;
+}
+
+.quote span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 98%;
+}
+
+.quote .left-quote::after {
+    -webkit-mask: url(left-quote.svg) no-repeat 100% 100%;
+    mask: url(left-quote.svg) no-repeat 100% 100%;
+    background-color: white;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.quote .right-quote::after {
+    -webkit-mask: url(right-quote.svg) no-repeat 100% 100%;
+    mask: url(right-quote.svg) no-repeat 100% 100%;
+    background-color: white;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+
+//################# confirmtion SVG/Icon ###########
+
+.confirmation-svg span {
+    position: relative;
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    margin: 1vh;
+}
+
+.confirmation-svg span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.confirmation-svg span::after {
+    -webkit-mask: url(thanks_ok.svg) no-repeat 100% 100%;
+    mask: url(thanks_ok.svg) no-repeat 100% 100%;
+    background-color: green;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+//#######################################
+//#             boxes                   #
+//#######################################
+
+.box-lg {
+    display: block;
+    margin: 20px 10px 20px 10px;
+    padding: 5px;
+}
+
+.base-section {
+    margin: 40px auto;
+    width: 90%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.section-content {
+    margin: 40px auto;
+}
+
+//#######################################
+//#             HOME                    #
+//#######################################
+
+#root-home {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    position: relative;
+}
+
+#home,
+#root-home {
+    width: 100%;
+    background: none;
+    height: 100%;
+}
+
+#title-background {
+    //background-color: red;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("home_background.svg") no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#title-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#home-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title {
+    width: 60%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title-heading h1 {
+    width: 100%;
+    font-family: "ProximaBold";
+    color: black;
+    font-size: 5vh;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+#title-sub-heading h3 {
+    width: 100%;
+    font-family: "ProximaThin";
+    color: black;
+    font-size: 3vh;
+    text-transform: capitalize;
+    margin: 25px 0 15px 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5vh;
+}
+
+#title-details h4 {
+    width: 100%;
+    font-family: "ProximaThin";
+    color: black;
+    font-size: 2.5vh;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 2.5vh;
+
+}
+
+
+.title-heading .key {
+    color: blue;
+}
+
+
+#contact-me {
+    margin: 30px 0 10px 0;
+}
+
+//#######################################
+//#           move down arrow           #
+//#######################################
+
+
+#move-down,
+#root-move-down {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateX(-50%);
+}
+
+#move-down a::after {
+    content: "R";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#move-down #arrow-down::after,
+#root-move-down #arrow-down-root::after {
+    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
+    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+    z-index: 1;
+}
+
+#move-down #arrow-down:hover::after,
+#move-down #arrow-down:focus::after,
+#root-move-down #arrow-down-root:hover::after,
+#root-move-down #arrow-down-root:focus::after {
+    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
+    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gray;
+
+}
+
+//#######################################
+//#      tech tags / award tag      #
+//#######################################
+
+.tag {
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+}
+
+.tag:hover {
+    transform: translateY(8px);
+}
+
+.award-batch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+}
+
+.award-batch span {
+    margin: 3px 6px;
+}
+
+.tag-award {
+    display: inline-block;
+    -webkit-mask: url(tag-award.svg) no-repeat 100% 100%;
+    mask: url(tag-award.svg) no-repeat 100% 100%;
+    background-color: gold;
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+    z-index: 1;
+}
+
+
+.tag-php {
+    background: url("tag-php.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-jquery {
+    background: url("tag-jquery.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-html5 {
+    background: url("tag-html5.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-css3 {
+    background: url("tag-css3.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-boots {
+    background: url("tag-boots.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-mysql {
+    background: url("tag-mysql.svg") no-repeat;
+    z-index: 1;
+}
+
+
+//#######################################
+//#             about                   #
+//#######################################
+
+#root-buttons {
+    display: none;
+}
+
+#about {
+    display: block;
+    position: relative;
+    background: none;
+    height: 100%;
+}
+
+/* 
+#about-background {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background: url("about_background.png") no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#about-overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.85);
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+ */
+#home-about {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.section-title {
+    margin: 0;
+    padding: 5px 0;
+    align-self: flex-start;
+
+}
+
+.section-title h1 {
+    //width: 100%;
+    font-family: "ProximaBold";
+    color: red;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 4.5vh;
+    border-bottom: 3px solid red;
+}
+
+.paragraphs {
+    margin: 10px 0 0 0;
+    flex-grow: 1;
+}
+
+.paragraphs p:first-child {
+    margin: 10px 0px 10px 0;
+}
+
+.paragraphs .pc,
+.paragraphs .ipad {
+    display: none;
+}
+
+.paragraphs .mobile {
+    display: inline-block;
+    width: 100%;
+    font-family: "ProximaReg";
+    color: black;
+    font-size: 3.5vh;
+    margin: 30px 0 10px 0;
+    display: inline-block;
+    text-align: left;
+    line-height: 4.0vh;
+}
+
+#get-resume {
+    margin: 20px;
+}
+
+
+//#######################################
+//#        project-container            #
+//#######################################
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 80vh;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 2.5%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.project-title h3,
+.left-side .paragraphs,
+.left-side .paragraphs p:first-child {
+    margin-top: 0;
+}
+
+.left-side .paragraphs p {
+    font-size: 3vh;
+    line-height: 3.5vh;
+
+}
+
+.project-container .left-side,
+.project-container .right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-container .right-side {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.left-side .button-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.right-side .app-picture {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    //height: 30vh;
+}
+
+.right-side .app-picture img {
+    display: block;
+    z-index: 1;
+    width: 100%;
+}
+
+.right-side .award-batch {
+    margin-bottom: 20px;
+}
+
+.right-side .tech {
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+}
+
+.button-area {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+//#######################################
+//#        Skills Section               #
+//#######################################
+
+
+.skills-column {
+    position: relative;
+    height: 85vh;
+    margin: 4vh auto;
+    padding: 2vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+    overflow: hidden;
+}
+
+.skills-column .head-title h2 {
+    font-family: "ProximaBold";
+    color: black;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills-column .skill-text p {
+    width: 90%;
+    font-family: "ProximaReg";
+    font-size: 2.3vh;
+    color: black;
+    line-height: 3.5vh;
+    margin: 1.4vh auto;
+    text-align: center;
+}
+
+.skills-column .head-sub-title h3 {
+    margin: 2vh auto;
+    font-family: "ProximaBold";
+    color: black;
+    font-size: 3vh;
+    text-transform: capitalise;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills-column ul {
+    list-style: none;
+    font-family: "ProximaReg";
+    font-size: 2.5vh;
+    line-height: 4.5vh;
+    padding: 0;
+    text-align: center;
+}
+
+.skills-column ul li {
+    position: relative;
+}
+
+#software ul li:nth-child(4)::after {
+    content: "1";
+    position: absolute;
+    top: -3px;
+    right: -4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(1)::after {
+    content: "1";
+    position: absolute;
+    top: -3px;
+    right: 4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(2)::after {
+    content: "2";
+    position: absolute;
+    top: -3px;
+    right: -4%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(3)::after,
+    {
+    content: "3";
+    position: absolute;
+    top: -3px;
+    right: 10%;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#management ul li:nth-child(4)::after {
+    content: "3";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+.skills-column ul .note {
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "ProximaThin";
+    font-size: 1.8vh;
+}
+
+//#######################################
+//#        Quote Section                #
+//#######################################
+
+#quote-section {
+    width: 100%;
+    margin: 60px 0;
+}
+
+#quote-section .section-content {
+    position: relative;
+    height: 35vh;
+    background-image: url("quote_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.quote p {
+    font-family: "ProximaBold";
+    font-size: 3vh;
+    line-height: 6.5vh;
+    text-align: center;
+    color: white;
+}
+
+.quote h4 {
+    font-family: "ProximaBold";
+    font-size: 2.5vh;
+    line-height: 5.5vh;
+    text-align: center;
+    color: white;
+}
+
+//#######################################
+//#        publications                 #
+//#######################################
+
+#pub-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.storycard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 85vw;
+    margin: 6vh auto;
+    height: 70vh;
+    box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.58);
+    overflow: hidden;
+    border: solid 1px;
+    border-color: #949494;
+
+
+    .head-picture {
+        position: relative;
+        background: url("https://hackernoon.com/drafts/2x20361b.png");
+        background-size: cover;
+        height: 40%;
+        flex-grow: 2;
+
+        .picture-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 4vh;
+            font-weight: 700;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 10px;
+            color: white;
+        }
+
+    }
+
+    .head-picture-medium {
+        position: relative;
+        background: url("https://miro.medium.com/max/552/1*9Ek1zVxM8jUEgpYzQYLyqg.jpeg");
+        background-size: cover;
+        height: 40%;
+        flex-grow: 2;
+
+        .picture-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 4vh;
+            font-weight: 700;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 10px;
+            color: white;
+        }
+
+    }
+
+    .story-title {
+        margin: 2vh;
+        font-size: 3vh;
+        margin-bottom: 0px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .story-short {
+        margin: 0 2vh;
+
+        .story-teaser {
+            font-size: 2.5vh;
+        }
+    }
+
+    .story-bottom {
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+        background: #CDCDCD;
+
+        .status {
+            margin-left: 1vh;
+            border: solid 1px;
+            border-color: rgb(24, 177, 2);
+            background-color: rgb(24, 177, 2);
+            padding: 1px 4px;
+            color: white;
+            border-radius: 5px;
+            font-size: 2vh;
+        }
+
+        .when {
+            font-family: "ProximaThin";
+            color: black;
+            font-size: 2.2vh;
+            padding: 5px;
+        }
+
+    }
+}
+
+//#######################################
+//#        Contact me                   #
+//#######################################
+
+#get-in-touch {
+    height: 95vh;
+    overflow: hidden;
+
+    width: 100%;
+
+    .title-heading {
+        width: 93%;
+        margin: 0 auto;
+    }
+
+    .title-heading h1 {
+        font-size: 3.8vh;
+        text-align: center;
+
+    }
+
+    .contact-links {
+        margin: 5vh auto;
+
+
+
+        .title-icons {
+            text-align: center;
+            margin: 5vh auto;
+            width: 90%;
+        }
+    }
+
+    .small-form {
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+        padding: 1vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 3vh;
+
+        .form-control {
+            height: 5vh;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 4vh;
+            text-align: center;
+        }
+
+        p {
+            font-size: 3vh;
+            line-height: 5vh;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 2vh;
+        }
+
+        form input,
+        #message {
+            margin-top: 1vh;
+            font-size: 2.5vh;
+        }
+
+        #message {
+            height: 8vh;
+        }
+
+
+    }
+
+
+}
+
+//##### making captcha room
+
+.g-recaptcha {
+    margin: 0 auto;
+    transform: scale(1.1);
+    transform-origin: 0 0;
+}
+
+
+#get-in-touch .small-form {
+    padding: 0;
+    box-shadow: none;
+}
+
+
+#get-in-touch .small-form p {
+    display: none;
+}
+
+#get-in-touch #submit-btn {
+    margin: 0 auto;
+    margin-top: 3vh;
+
+    width: 100%;
+}
+
+
+
+//###################################################
+//#           XS- screen media query               #
+//###################################################
+
+@media all and (max-width: 320px) {
+    .skills-column {
+        height: 80vh;
+        margin: 2vh auto;
+        padding: 2vh;
+    }
+
+    //##### quote-section
+
+
+    .quote p {
+        font-size: 3.5vh;
+        line-height: 6.5vh;
+    }
+
+    .storycard {
+        margin-top: 4vh;
+    }
+
+    //##### publications
+
+    .storycard {
+        margin-top: 3vh;
+    }
+
+    .storycard:first-child {
+        margin-top: 0vh;
+    }
+
+    //######### Make captcha fit
+
+    .g-recaptcha {
+        margin: 0 auto;
+        transform: scale(0.90);
+        transform-origin: 0 0;
+    }
+
+
+    #get-in-touch .small-form {
+        padding: 0;
+        box-shadow: none;
+    }
+
+
+    #get-in-touch .small-form p {
+        display: none;
+    }
+
+    #get-in-touch #submit-btn {
+        margin: 0 auto;
+        margin-top: 1vh;
+        width: 100%;
+    }
+
+}
+
+//###################################################
+//#            mid-screen media query               #
+//###################################################
+
+@media all and (min-width: 768px) {
+    #root-home {
+        position: relative;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+
+    #contact-me,
+    #get-resume,
+    #move-down {
+        display: none;
+    }
+
+
+    #home {
+        width: 50%;
+        height: 70%;
+        align-self: center;
+    }
+
+    #about {
+        width: 50%;
+        height: 70%;
+        align-self: center;
+    }
+
+    #root-buttons {
+        width: 100%;
+    }
+
+    #main-title {
+        margin-top: 40%;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    #main-title h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    #main-title h3 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        padding: 0;
+        width: 100;
+        text-align: left;
+
+    }
+
+    #main-title h4 {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .title-icons {
+        margin-top: 50px;
+        width: 80%;
+        align-self: center;
+    }
+
+    .title-icons a {
+        margin-top: 20%;
+        width: 3rem;
+        height: 3rem;
+
+    }
+
+    .title-icons a::after {
+        padding: 22px;
+    }
+
+    #contact-me {
+        margin-top: 10%;
+        align-self: center;
+    }
+
+    //########### about media ############
+
+    #home-about {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /*     .section-title {
+        margin-top: 10px;
+        align-self: center;
+        padding-bottom: 6px;
+    }
+
+    .section-title h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    } */
+
+    #home-about .paragraphs {
+        margin-bottom: 0px;
+    }
+
+    #home-about .paragraphs p {
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+
+    .paragraphs .mobile {
+        font-family: "ProximaThin";
+        font-size: 5.0rem;
+    }
+
+    //########### root buttons ############
+
+    #root-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    //######### projects section ###################
+
+    section #projects {
+        height: auto;
+    }
+
+    .project-title h3 {
+        font-size: 3.5vw;
+        font-family: "ProximaBold";
+    }
+
+    .project-title h3,
+    .left-side .paragraphs,
+    .left-side .paragraphs p:first-child {
+        margin-top: 10px;
+    }
+
+    .left-side .paragraphs p {
+        font-size: 2.8vw;
+        line-height: 4.5vh;
+    }
+
+    .project-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .project-container .left-side {
+        width: 46%;
+    }
+
+
+    .project-container .right-side {
+        width: 49%;
+        justify-content: center;
+    }
+
+
+    .project-container .button-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .tag {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .right-side .app-picture {
+        height: auto;
+        margin: 30px 0px;
+    }
+
+
+    //########## skills section ######
+
+    .skills-column {
+        justify-content: flex-start;
+    }
+
+    .skills-column .head-title h2 {
+        margin: 4vh 0;
+    }
+
+    //##### quote-section
+
+    .quote {
+        padding: 1vh;
+    }
+
+    .quote p {
+        font-size: 4vh;
+        line-height: 6.5vh;
+    }
+
+    //######### publications ###################
+
+    .storycard {
+        height: 80vh;
+
+
+        .head-picture {
+            flex-grow: 2;
+
+            .picture-label {
+                font-size: 4vh;
+                margin: 1vh;
+            }
+        }
+
+        .story-title {
+            margin: 0 2vh 2vh 2vh;
+        }
+
+        .story-short {
+            margin: 0 2vh 2vh 2vh;
+        }
+
+
+    }
+
+    .storycard:first-child {
+        margin-top: 1vh;
+    }
+
+    //######### get in touch ###################
+
+    #get-in-touch {
+        .title-icons {
+            height: 5vh;
+            width: 70%;
+
+            a {
+                margin-top: 0;
+                width: 6vh;
+                height: 6vh;
+            }
+        }
+    }
+
+    #contact-form {
+        margin: 0 auto;
+        margin-bottom: 4vh;
+        width: 90%;
+    }
+
+
+    //###### adjusting for captcha in form
+
+    #get-in-touch .small-form p {
+        display: inline-block;
+    }
+
+    .bottom-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+
+    }
+
+    #get-in-touch #sbt-btn {
+        width: 35%;
+    }
+
+    #get-in-touch #submit-btn {
+        margin: 0;
+        height: 8vh;
+
+    }
+
+
+    .small-form {
+        padding: 10px 0;
+        width: 75%;
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+
+    }
+
+
+
+}
+
+//###################################################
+//#            big-screen media query               #
+//###################################################
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+    #main-title {
+        margin-top: 10%;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    .section-title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        align-self: center;
+        padding-bottom: 6px;
+    }
+
+    .section-title h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #home-about .paragraphs p:first-child {
+        margin-top: 15px;
+    }
+
+    .paragraphs .mobile {
+        font-family: "ProximaThin";
+        font-size: 4.0rem;
+        margin: 20px 0 10px 0;
+        display: inline-block;
+        text-align: left;
+        line-height: 80px;
+    }
+
+    //############## skills section ###########
+
+    #skills-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+        justify-content: center;
+        height: 90vh;
+    }
+
+    .skills-column {
+        height: 85vh;
+        margin: 2vh auto;
+        padding: 1vh;
+        width: 95%;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .skills-column:nth-child(2) {
+        border-left: solid 0.5px;
+        border-right: solid 0.5px;
+        border-color: #DCDCDC;
+
+    }
+
+    .skills-column .head-sub-title h3 {
+        // margin: 1vh auto;
+        margin: 4vh 0;
+        font-size: 2.8vh;
+    }
+
+    .skills-column ul {
+        line-height: 3.6vh;
+    }
+
+    //######### publications ###################
+
+    #pub-container {
+        flex-wrap: nowrap;
+
+        .storycard {
+            width: 42vw;
+            margin: 1vh 0;
+        }
+    }
+
+    //########### get in touch  ############
+
+
+
+    #get-in-touch {
+        .title-heading {
+            font-size: 5.5vh;
+            width: 90%;
+        }
+
+        .contact-links {
+            width: 30%;
+
+            .title-icons {
+                height: 5vh;
+                width: 75%;
+
+                a {
+                    margin-top: 0;
+                    width: 6vh;
+                    height: 6vh;
+                }
+            }
+        }
+
+        .small-form {
+            padding: 10px 0;
+            width: 75%;
+            border-radius: 4px;
+            box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+
+        }
+    }
+
+    .g-recaptcha {
+        margin: 0 auto;
+        transform: scale(0.90);
+        transform-origin: 0 0;
+        flex-grow: 1;
+    }
+
+}
+
+//###################################################
+//#            X-big-screen media query             #
+//###################################################
+
+@media all and (min-width: 1200px) {
+    .paragraphs .pc {
+        display: inline;
+    }
+
+    #home-about .paragraphs {
+        margin-top: 35px;
+    }
+
+    //######### projects section ###################
+
+    .left-side .paragraphs p {
+        font-size: 2.2vw;
+        line-height: 3vw;
+    }
+
+    .btn-project {
+        font-size: 1.5vw;
+        margin-left: 3vw;
+    }
+
+    .award-batch span {
+        margin: 3px 6px;
+        font-size: 1.8vw;
+    }
+
+    .tag {
+        width: 6rem;
+        height: 3rem;
+        margin: 6px;
+    }
+
+
+    .tag-award {
+        height: 4rem;
+        width: 4rem;
+        margin-left: 3px;
+    }
+
+    //############ skills section ########
+
+    .skills-column .head-title h2 {
+        margin: 4vh 0;
+    }
+
+    //########## get in touch
+
+    #get-in-touch .small-form {
+        width: 60%;
+
+    }
+}
