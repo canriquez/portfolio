@@ -7,6 +7,10 @@ set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
+#after generating certificate:
+
+set :enable_ssl,      true
+
 # Don't change these unless you know what you're doing
 
 set :pty,             true
