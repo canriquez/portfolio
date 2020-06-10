@@ -25,7 +25,7 @@ production:
   host: localhost
   adapter: postgresql
   encoding: utf8
-  database: appname_production
+  database: portfolio_production
   pool: 5
-  username: <%= ENV['APPNAME_DATABASE_USER'] %>
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  username: <%= ENV['PORTFOLIO_DATABASE_USER'] %>
+  password: <%= ENV['POTFOLIO_DATABASE_PASSWORD'] %>
