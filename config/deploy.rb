@@ -23,6 +23,10 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
+set :pg_password, ENV['PORTFOLIO_DATABASE_PASSWORD']
+set :pg_ask_for_password, true
+
 #set :default_shell, "/bin/bash -l"
 set :rvm_type, :system
 append :linked_files, "config/master.key"
