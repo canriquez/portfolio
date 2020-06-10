@@ -224,7 +224,7 @@ section {
 }
 
 .btn-project .btn-2::after {
-    -webkit-mask: url(case_1.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("case_1.svg") no-repeat 100% 100%;
     mask: url(case_1.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
