@@ -230,6 +230,20 @@ section {
     background-color: white;
 }
 
+//###### back to UP button
+
+.btn-back {
+    background: red !important;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding: 7px 15px;
+    display: none;
+    border-color: red !important;
+    color: white;
+    z-index: 3;
+}
+
 //#######################################
 //#           ICONS                     #
 //#######################################
@@ -1550,6 +1564,7 @@ footer p span {
 
     .navbar {
         padding: 10px 5px 10px 5px;
+        transition: all 0.5s;
     }
 
     .nav-wrap {
@@ -1563,13 +1578,11 @@ footer p span {
     .navbar-brand {
         padding-top: 10px;
         p {
-            font-family: "ProximaBold", sans-serif;
+            font-family: "ProximaReg", sans-serif;
             font-size: 2.5vw;
             text-transform: uppercase;
             margin: 0px;
-            span {
-                color: blue;
-            }
+            color: black;
         }
     }
 
@@ -1584,24 +1597,42 @@ footer p span {
     ul.navbar-nav > li > a:hover,
     ul.navbar-nav > li > a:focus {
         background: none;
-        color: blue;
+        color: red;
     }
     //White navigation
     .nav-top {
-        background: white;
+        background: black;
         box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1),
             0 5px 15px rgba(0, 0, 0, 0.1);
         z-index: 3;
 
         ul.navbar-nav > li > a {
-            color: gray;
+            color: white;
         }
 
         ul.navbar-nav > li > a:hover,
         ul.navbar-nav > li > a:focus {
             background: none;
-            color: blue;
+            color: red;
         }
+
+        .navbar-brand {
+            padding-top: 10px;
+            p {
+                font-family: "ProximaReg", sans-serif;
+                font-size: 2.5vw;
+                text-transform: uppercase;
+                margin: 0px;
+                color: white;
+                /*  span {
+                    display: none;
+                } */
+            }
+        }
+    }
+
+    ul.navbar-nav > li.active > a {
+        color: red;
     }
 }
 

@@ -149,9 +149,43 @@ document.addEventListener("turbolinks:load", function () {
         }
     });
 
+    /*=========================================================
+     Form validation process
+     ==========================================================*/
+    showHideNavbar();
+
+
+    $(window).scroll(function () {
+        showHideNavbar();
+    });
+
+    function showHideNavbar() {
+        if ($(window).scrollTop() > 50) {
+            // shows nav 
+            $("nav").addClass("nav-top");
+            $("#back-up").fadeIn();
+        } else {
+
+            //hides nav
+            $("nav").removeClass("nav-top");
+
+            // shows back button
+            $("#back-up").fadeOut();
+
+        }
+    }
+
+    $("a.smooth-scroll").click(function (event) {
+        event.preventDefault();
+        //get section id
+        var section_id = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $(section_id).offset().top - 80
+        }, 900);
+
+    });
+
 });
-
-
 
 
 document.addEventListener("turbolinks:before-cache", function () {
