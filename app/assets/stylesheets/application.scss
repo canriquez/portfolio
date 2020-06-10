@@ -1232,6 +1232,82 @@ footer p span {
     color: yellow;
 }
 
+//#######################################
+//#        navigation                   #
+//#######################################
+
+.navbar {
+    padding: 10px 5px 10px 5px;
+    transition: all 0.5s;
+}
+
+.nav-wrap {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding-top: 10px;
+    p {
+        font-family: "ProximaReg", sans-serif;
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        margin: 0px;
+        color: black;
+    }
+}
+
+ul.navbar-nav > li > a {
+    font-family: "ProximaReg", sans-serif;
+    padding: 10px;
+    color: #000;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+    background: none;
+    color: red;
+}
+//White navigation
+.nav-top {
+    background: black;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+
+    ul.navbar-nav > li > a {
+        color: white;
+    }
+
+    ul.navbar-nav > li > a:hover,
+    ul.navbar-nav > li > a:focus {
+        background: none;
+        color: red;
+    }
+
+    .navbar-brand {
+        padding-top: 10px;
+        p {
+            font-family: "ProximaReg", sans-serif;
+            font-size: 2.5vw;
+            text-transform: uppercase;
+            margin: 0px;
+            color: white;
+            /*  span {
+                    display: none;
+                } */
+        }
+    }
+}
+
+ul.navbar-nav > li.active > a {
+    color: red;
+}
+
 //###################################################
 //#           XS- screen media query               #
 //###################################################
@@ -1556,83 +1632,6 @@ footer p span {
         border-radius: 4px;
         box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08),
             0 5px 15px rgba(0, 0, 0, 0.08);
-    }
-
-    //#######################################
-    //#        navigation                   #
-    //#######################################
-
-    .navbar {
-        padding: 10px 5px 10px 5px;
-        transition: all 0.5s;
-    }
-
-    .nav-wrap {
-        padding: 0 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-brand {
-        padding-top: 10px;
-        p {
-            font-family: "ProximaReg", sans-serif;
-            font-size: 2.5vw;
-            text-transform: uppercase;
-            margin: 0px;
-            color: black;
-        }
-    }
-
-    ul.navbar-nav > li > a {
-        font-family: "ProximaReg", sans-serif;
-        padding: 10px;
-        color: #000;
-        font-size: 1.4vw;
-        text-transform: uppercase;
-    }
-
-    ul.navbar-nav > li > a:hover,
-    ul.navbar-nav > li > a:focus {
-        background: none;
-        color: red;
-    }
-    //White navigation
-    .nav-top {
-        background: black;
-        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1),
-            0 5px 15px rgba(0, 0, 0, 0.1);
-        z-index: 3;
-
-        ul.navbar-nav > li > a {
-            color: white;
-        }
-
-        ul.navbar-nav > li > a:hover,
-        ul.navbar-nav > li > a:focus {
-            background: none;
-            color: red;
-        }
-
-        .navbar-brand {
-            padding-top: 10px;
-            p {
-                font-family: "ProximaReg", sans-serif;
-                font-size: 2.5vw;
-                text-transform: uppercase;
-                margin: 0px;
-                color: white;
-                /*  span {
-                    display: none;
-                } */
-            }
-        }
-    }
-
-    ul.navbar-nav > li.active > a {
-        color: red;
     }
 }
 
