@@ -216,16 +216,16 @@ section {
 }
 
 .btn-project .btn-1::after {
-    -webkit-mask: url(link_1.svg) no-repeat 100% 100%;
-    mask: url(link_1.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(link_1.svg) no-repeat 100% 100%;
+    mask: asset-url(link_1.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
 }
 
 .btn-project .btn-2::after {
-    -webkit-mask: url(case_1.svg) no-repeat 100% 100%;
-    mask: url(case_1.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(case_1.svg) no-repeat 100% 100%;
+    mask: asset-url(case_1.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -275,32 +275,32 @@ section {
 }
 
 .title-icons #git::after {
-    -webkit-mask: url(git.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(git.svg) no-repeat 100% 100%;
+    mask: asset-url(git.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #lin::after {
-    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
-    mask: url(lin.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(lin.svg) no-repeat 100% 100%;
+    mask: asset-url(lin.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #twi::after {
-    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
-    mask: url(twi.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(twi.svg) no-repeat 100% 100%;
+    mask: asset-url(twi.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #sts::after {
-    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
-    mask: url(sts.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(sts.svg) no-repeat 100% 100%;
+    mask: asset-url(sts.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
@@ -329,8 +329,8 @@ section {
 }
 
 .head-icon #skill-electronics::after {
-    -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
-    mask: url(skill_radio.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(skill_radio.svg) no-repeat 100% 100%;
+    mask: asset-url(skill_radio.svg) no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -338,8 +338,8 @@ section {
 }
 
 .head-icon #skill-software::after {
-    -webkit-mask: url(skill_software.svg) no-repeat 100% 100%;
-    mask: url(skill_software.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(skill_software.svg) no-repeat 100% 100%;
+    mask: asset-url(skill_software.svg) no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -347,8 +347,8 @@ section {
 }
 
 .head-icon #skill-management::after {
-    -webkit-mask: url(skill_manager1.svg) no-repeat 100% 100%;
-    mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(skill_manager1.svg) no-repeat 100% 100%;
+    mask: asset-url(skill_manager1.svg) no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -374,8 +374,8 @@ section {
 }
 
 .quote .left-quote::after {
-    -webkit-mask: url(left-quote.svg) no-repeat 100% 100%;
-    mask: url(left-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(left-quote.svg) no-repeat 100% 100%;
+    mask: asset-url(left-quote.svg) no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -385,8 +385,8 @@ section {
 }
 
 .quote .right-quote::after {
-    -webkit-mask: url(right-quote.svg) no-repeat 100% 100%;
-    mask: url(right-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(right-quote.svg) no-repeat 100% 100%;
+    mask: asset-url(right-quote.svg) no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -414,8 +414,8 @@ section {
 }
 
 .confirmation-svg span::after {
-    -webkit-mask: url(thanks_ok.svg) no-repeat 100% 100%;
-    mask: url(thanks_ok.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(thanks_ok.svg) no-repeat 100% 100%;
+    mask: asset-url(thanks_ok.svg) no-repeat 100% 100%;
     background-color: green;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -476,7 +476,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: url("home_background.svg") no-repeat;
+    background: asset-url("home_background.svg") no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -581,8 +581,8 @@ section {
 
 #move-down #arrow-down::after,
 #root-move-down #arrow-down-root::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(arrow_down.svg) no-repeat 100% 100%;
+    mask: asset-url(arrow_down.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -593,8 +593,8 @@ section {
 #move-down #arrow-down:focus::after,
 #root-move-down #arrow-down-root:hover::after,
 #root-move-down #arrow-down-root:focus::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(arrow_down.svg) no-repeat 100% 100%;
+    mask: asset-url(arrow_down.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
@@ -630,8 +630,8 @@ section {
 
 .tag-award {
     display: inline-block;
-    -webkit-mask: url(tag-award.svg) no-repeat 100% 100%;
-    mask: url(tag-award.svg) no-repeat 100% 100%;
+    -webkit-mask: asset-url(tag-award.svg) no-repeat 100% 100%;
+    mask: asset-url(tag-award.svg) no-repeat 100% 100%;
     background-color: gold;
     height: 24px;
     width: 24px;
@@ -641,32 +641,32 @@ section {
 
 
 .tag-php {
-    background: url("tag-php.svg") no-repeat;
+    background: asset-url("tag-php.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-jquery {
-    background: url("tag-jquery.svg") no-repeat;
+    background: asset-url("tag-jquery.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-html5 {
-    background: url("tag-html5.svg") no-repeat;
+    background: asset-url("tag-html5.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-css3 {
-    background: url("tag-css3.svg") no-repeat;
+    background: asset-url("tag-css3.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-boots {
-    background: url("tag-boots.svg") no-repeat;
+    background: asset-url("tag-boots.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-mysql {
-    background: url("tag-mysql.svg") no-repeat;
+    background: asset-url("tag-mysql.svg") no-repeat;
     z-index: 1;
 }
 
@@ -697,7 +697,7 @@ section {
     min-height: 100%;
     width: auto;
     height: auto;
-    background: url("about_background.png") no-repeat;
+    background: asset-url("about_background.png") no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -987,7 +987,7 @@ section {
 #quote-section .section-content {
     position: relative;
     height: 35vh;
-    background-image: url("quote_background.jpg");
+    background-image: asset-url("quote_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
