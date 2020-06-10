@@ -53,17 +53,17 @@ label .form-error {
 
 @font-face {
     font-family: "ProximaThin";
-    src: font_url("proxima/ProximaNovaThin.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaThin.otf") format("opentype");
 }
 
 @font-face {
     font-family: "ProximaReg";
-    src: font_url("proxima/ProximaNovaRegular.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaRegular.otf") format("opentype");
 }
 
 @font-face {
     font-family: "ProximaBold";
-    src: font_url("proxima/ProximaNovaBold.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaBold.otf") format("opentype");
 }
 
 //#################################
