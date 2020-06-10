@@ -216,8 +216,8 @@ section {
 }
 
 .btn-project .btn-1::after {
-    -webkit-mask: url(link_1.svg) no-repeat 100% 100%;
-    mask: url(link_1.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("link_1.svg") no-repeat 100% 100%;
+    mask: img-url("link_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -476,7 +476,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: url("home_background.svg") no-repeat;
+    background: img-url("home_background.svg") no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -581,8 +581,8 @@ section {
 
 #move-down #arrow-down::after,
 #root-move-down #arrow-down-root::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("arrow_down.svg") no-repeat 100% 100%;
+    mask: img-url("arrow_down.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -593,8 +593,8 @@ section {
 #move-down #arrow-down:focus::after,
 #root-move-down #arrow-down-root:hover::after,
 #root-move-down #arrow-down-root:focus::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("arrow_down.svg") no-repeat 100% 100%;
+    mask: img-url("arrow_down.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
@@ -630,8 +630,8 @@ section {
 
 .tag-award {
     display: inline-block;
-    -webkit-mask: url(tag-award.svg) no-repeat 100% 100%;
-    mask: url(tag-award.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("tag-award.svg") no-repeat 100% 100%;
+    mask: img-url("tag-award.svg") no-repeat 100% 100%;
     background-color: gold;
     height: 24px;
     width: 24px;
@@ -641,32 +641,32 @@ section {
 
 
 .tag-php {
-    background: url("tag-php.svg") no-repeat;
+    background: img-url("tag-php.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-jquery {
-    background: url("tag-jquery.svg") no-repeat;
+    background: img-url("tag-jquery.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-html5 {
-    background: url("tag-html5.svg") no-repeat;
+    background: img-url("tag-html5.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-css3 {
-    background: url("tag-css3.svg") no-repeat;
+    background: img-url("tag-css3.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-boots {
-    background: url("tag-boots.svg") no-repeat;
+    background: img-url("tag-boots.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-mysql {
-    background: url("tag-mysql.svg") no-repeat;
+    background: img-url("tag-mysql.svg") no-repeat;
     z-index: 1;
 }
 
@@ -987,7 +987,7 @@ section {
 #quote-section .section-content {
     position: relative;
     height: 35vh;
-    background-image: url("quote_background.jpg");
+    background-image: img-url("quote_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
