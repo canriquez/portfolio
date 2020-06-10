@@ -225,7 +225,7 @@ section {
 
 .btn-project .btn-2::after {
     -webkit-mask: image-url("case_1.svg") no-repeat 100% 100%;
-    mask: url(case_1.svg) no-repeat 100% 100%;
+    mask: image-url("case_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -275,32 +275,32 @@ section {
 }
 
 .title-icons #git::after {
-    -webkit-mask: url(git.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("git.svg") no-repeat 100% 100%;
+    mask: image-url("git.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #lin::after {
-    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
-    mask: url(lin.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("lin.svg") no-repeat 100% 100%;
+    mask: image-url("lin.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #twi::after {
-    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
-    mask: url(twi.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("twi.svg") no-repeat 100% 100%;
+    mask: img-url("twi.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #sts::after {
-    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
-    mask: url(sts.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("sts.svg") no-repeat 100% 100%;
+    mask: img-url("sts.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
@@ -329,8 +329,8 @@ section {
 }
 
 .head-icon #skill-electronics::after {
-    -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
-    mask: url(skill_radio.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("skill_radio.svg") no-repeat 100% 100%;
+    mask: img-url("skill_radio.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -338,8 +338,8 @@ section {
 }
 
 .head-icon #skill-software::after {
-    -webkit-mask: url(skill_software.svg) no-repeat 100% 100%;
-    mask: url(skill_software.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("skill_software.svg") no-repeat 100% 100%;
+    mask: img-url("skill_software.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -347,8 +347,8 @@ section {
 }
 
 .head-icon #skill-management::after {
-    -webkit-mask: url(skill_manager1.svg) no-repeat 100% 100%;
-    mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("skill_manager1.svg") no-repeat 100% 100%;
+    mask: img-url("skill_manager1.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -374,8 +374,8 @@ section {
 }
 
 .quote .left-quote::after {
-    -webkit-mask: url(left-quote.svg) no-repeat 100% 100%;
-    mask: url(left-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("left-quote.svg") no-repeat 100% 100%;
+    mask: img-url("left-quote.svg") no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -385,8 +385,8 @@ section {
 }
 
 .quote .right-quote::after {
-    -webkit-mask: url(right-quote.svg) no-repeat 100% 100%;
-    mask: url(right-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("right-quote.svg") no-repeat 100% 100%;
+    mask: img-url("right-quote.svg") no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -414,8 +414,8 @@ section {
 }
 
 .confirmation-svg span::after {
-    -webkit-mask: url(thanks_ok.svg) no-repeat 100% 100%;
-    mask: url(thanks_ok.svg) no-repeat 100% 100%;
+    -webkit-mask: img-url("thanks_ok.svg") no-repeat 100% 100%;
+    mask: img-url("thanks_ok.svg") no-repeat 100% 100%;
     background-color: green;
     -webkit-mask-size: cover;
     mask-size: cover;
