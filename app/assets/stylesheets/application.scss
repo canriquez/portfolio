@@ -209,6 +209,10 @@ section {
     border: 1px solid gray;
 }
 
+.button-area a:hover {
+    text-decoration: none !important;
+}
+
 .btn-project .btn-1::after {
     -webkit-mask: image-url("link_1.svg") no-repeat 100% 100%;
     mask: image-url("link_1.svg") no-repeat 100% 100%;
@@ -220,6 +224,22 @@ section {
 .btn-project .btn-2::after {
     -webkit-mask: image-url("case_1.svg") no-repeat 100% 100%;
     mask: image-url("case_1.svg") no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+.btn-project .btn-3::after {
+    -webkit-mask: image-url("git.svg") no-repeat 100% 100%;
+    mask: image-url("git.svg") no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+.btn-project .btn-4::after {
+    -webkit-mask: image-url("video.svg") no-repeat 100% 100%;
+    mask: image-url("video.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -668,6 +688,20 @@ section {
     z-index: 1;
 }
 
+.tag-rails {
+    background: image-url("tag-rails.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-ruby {
+    background: image-url("tag-ruby.svg") no-repeat;
+    z-index: 1;
+}
+.tag-postg {
+    background: image-url("tag-postg.svg") no-repeat;
+    z-index: 1;
+}
+
 //#######################################
 //#             about                   #
 //#######################################
@@ -816,6 +850,10 @@ section {
     justify-content: space-between;
 }
 
+.left-side .button-area a:hover {
+    text-decoration: none !important;
+}
+
 .right-side .app-picture {
     position: relative;
     overflow: hidden;
@@ -824,12 +862,17 @@ section {
 }
 
 .right-side .app-picture img {
+    position: relative;
     display: block;
     z-index: 1;
     width: 100%;
 }
 
 .right-side .award-batch {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 20px;
 }
 
@@ -1779,7 +1822,7 @@ ul.navbar-nav > li.active > a {
     //######### projects section ###################
 
     .left-side .paragraphs p {
-        font-size: 2.2vw;
+        font-size: 2vw;
         line-height: 3vw;
     }
 
@@ -1790,7 +1833,7 @@ ul.navbar-nav > li.active > a {
 
     .award-batch span {
         margin: 3px 6px;
-        font-size: 1.8vw;
+        font-size: 1.2vw;
     }
 
     .tag {
@@ -1800,8 +1843,8 @@ ul.navbar-nav > li.active > a {
     }
 
     .tag-award {
-        height: 4rem;
-        width: 4rem;
+        height: 2.5rem;
+        width: 2.5rem;
         margin-left: 3px;
     }
 
