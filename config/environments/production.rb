@@ -94,7 +94,7 @@ Rails.application.configure do
 
 
   # mailer configuration
-
+  host = 'www.carlosanriquez.com'
   config.action_mailer.default_url_options = { :host => 'www.carlosanriquez.com', protocol: 'http' }
 
 
