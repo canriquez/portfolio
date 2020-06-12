@@ -1294,6 +1294,15 @@ footer p span {
 
 .navbar-brand {
     padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+        border-radius: 100%;
+        width: 55px;
+        margin-right: 20px;
+    }
     p {
         font-family: "ProximaReg", sans-serif;
         font-size: 2.5vw;
