@@ -35,7 +35,7 @@ set :pg_ask_for_password, true
 set :rvm_type, :system
 append :linked_files, "config/master.key"
 append :linked_files, "config/secrets.yml.key"
-append :linked_files, "config/.env.production"
+append :linked_files, %w(.env.production)
 
 ## Defaults:
 # set :scm,           :git
@@ -93,6 +93,32 @@ namespace :deploy do
   after  :finishing,    :restart
 end
 
+
+
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
+
+namespace :rails do
+  desc "Open the rails console"
+  task :console do
+    on roles(:app) do
+      rails_env = fetch(:rails_env, 'production')
+      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails console #{rails_env}"
+    end
+  end
+
+  desc "Open the rails dbconsole"
+  task :dbconsole do
+    on roles(:app) do
+      rails_env = fetch(:rails_env, 'production')
+      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails dbconsole #{rails_env}"
+    end
+  end
+
+  def execute_interactively(command)
+    user = fetch(:user)
+    port = fetch(:port) || 22
+    exec "ssh -l #{user} #{host} -p #{port} -t 'cd #{deploy_to}/current && #{command}'"
+  end
+end
