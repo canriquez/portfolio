@@ -1,3 +1,30 @@
+<header>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="nav-wrap">
+        <div class="navbar-header">
+          <a href="#root-home" class="navbar-brand smooth-scroll">
+            <img src="<%= asset_path('avatar.jpg') %>" alt="Carlos Anriquez">
+            <p>C<span>arlos</span> A<span>nriquez</span> </p>
+          </a>
+        </div>
+        <!-- menu options -->
+        <div class="options-wrap">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav pull-right">
+              <li><a class="smooth-scroll" href="#home">Home</a></li>
+              <li><a class="smooth-scroll" href="#about">About</a></li>
+              <li><a class="smooth-scroll" href="#projects">Projects</a></li>
+              <li><a class="smooth-scroll" href="#skills">Skills</a></li>
+              <li><a class="smooth-scroll" href="#publications">Publications</a></li>
+              <li><a class="smooth-scroll" href="#get-in-touch">In Touch</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
 <div id="root-home">
   <div id="title-background" ></div>
   <div id="title-overlay"></div>
@@ -16,13 +43,13 @@
           <h4>web developer portfolio </h4>
         </div>
         <div class="title-icons">
-          <a id="git" href="#"></a>
-          <a id="lin" href="#"></a>
-          <a id="twi" href="#"></a>
-          <a id="sts" href="#"></a>
+          <a id="git"  target="_blank" href="https://github.com/canriquez"></a>
+          <a id="lin"  target="_blank" href="https://www.linkedin.com/in/carlosanriquez/"></a>
+          <a id="twi"  target="_blank" href="https://twitter.com/cranriquez"></a>
+          <a id="sts"  target="_blank" href="https://sourcerer.io/canriquez"></a>
         </div>
         <div id="contact-me">
-          <a class="btn btn-general btn-home" href="#" title="Contact Me Now" role="button">Contact Me Now</a>
+          <a class="btn btn-general btn-home smooth-scroll" href="#get-in-touch" title="Contact Me Now" role="button">Contact Me Now</a>
         </div>
       </div>
     </div>
@@ -46,19 +73,23 @@
         <p class="mobile pc">After 17 years in telecom, I have now started my adventure in the software development industry, and I am loving it. </p>
       </div>
       <div id="get-resume">
-        <a class="btn btn-general btn-home" href="#" title="Get my resume" role="button">get my resume</a>
+        <%= link_to "Get my resume", welcome_download_resume_path, 
+        class: "btn btn-general btn-home", 
+        data: { :'no-turbolink' => true } %>
       </div>
     </div>
   </section>
   <div id="root-buttons">
     <div id="contact-me-root">
-      <a class="btn btn-general btn-home" href="#" title="Contact Me Now" role="button">Contact Me Now</a>
+      <a class="btn btn-general btn-home smooth-scroll" href="#get-in-touch" title="Contact Me Now" role="button">Contact Me Now</a>
     </div>
     <div id="root-move-down">
       <a id="arrow-down-root" href="#projects"></a>
     </div>
     <div id="resume-me-root">
-      <a class="btn btn-general btn-home" href="#" title="Get my resume" role="button">Get my resume</a>
+      <%= link_to "Get my resume", welcome_download_resume_path, 
+        class: "btn btn-general btn-home", 
+        data: { :'no-turbolink' => true } %>
     </div>
   </div>
 </div>
@@ -71,7 +102,7 @@
       <!-- project left side -->
       <div class="left-side">
         <div class="project-title">
-          <h3>RAYCES.COM</h3>
+          <h3>Web Site : rayces.com</h3>
         </div>
         <div class="paragraphs">
           <p>Complete responsive web site design and implementation.</p>
@@ -99,7 +130,7 @@
         </div>
       </div>
       <div class="button-area">
-        <a href="#projects">
+        <a target="_blank" href="https://www.rayces.com">
           <button class="btn btn-project">
             <span class="btn-1"></span>
             Live Site
@@ -117,11 +148,11 @@
       <!-- project left side -->
       <div class="left-side">
         <div class="project-title">
-          <h3>RAYCES.COM</h3>
+          <h3>Newsweek Clone</h3>
         </div>
         <div class="paragraphs">
-          <p>Complete responsive web site design and implementation.</p>
-          <p>Interfacing the customer in all required steps (Wireframing, design and implementation)</p>
+          <p>Complete responsive web site clone from Newsweek Magazine.</p>
+          <p>Applied solution uses bootstrap framework and customised CSS classes. </p>
         </div>
       </div>
       <!-- project right side -->
@@ -131,30 +162,142 @@
             <span class="tag tag-html5"></span>
             <span class="tag tag-css3"></span>
             <span class="tag tag-boots"></span>
-            <span class="tag tag-php"></span>
             <span class="tag tag-jquery"></span>
-            <span class="tag tag-mysql"></span>
           </div>
         </div>
         <div class="app-picture">
-          <img src="<%= asset_path('project_01.jpg') %>" alt="project_01 image">
-        </div>
-        <div class="award-batch">
-          <span class="tag-award"></span>
-          <span>Happy Customer</span>
+          <img src="<%= asset_path('project_02.jpg') %>" alt="project_01 image">
         </div>
       </div>
       <div class="button-area">
-        <a href="#projects">
+        <a target="_blank" href="https://canriquez.github.io/using-bootstrap/">
           <button class="btn btn-project">
             <span class="btn-1"></span>
             Live Site
           </button>
         </a>
-        <a href="#projects">
+        <a target="_blank" href="https://github.com/canriquez/using-bootstrap">
           <button class="btn btn-project">
-            <span class="btn-2"></span>
-            Case Study
+            <span class="btn-3"></span>
+            Github repo
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="item project-container">
+      <!-- project left side -->
+      <div class="left-side">
+        <div class="project-title">
+          <h3>Twittter app</h3>
+        </div>
+        <div class="paragraphs">
+          <p>Building a Full Stack Twitter Clone </p>
+          <p>Sessions, Cookies, Authentication </p>
+        </div>
+      </div>
+      <!-- project right side -->
+      <div class="right-side">
+        <div class="top-row">
+          <div class="tech">
+            <span class="tag tag-html5"></span>
+            <span class="tag tag-css3"></span>
+            <span class="tag tag-ruby"></span>
+            <span class="tag tag-rails"></span>
+            <span class="tag tag-postg"></span>
+          </div>
+        </div>
+        <div class="app-picture">
+          <img src="<%= asset_path('project_03.jpg') %>" alt="project_01 image">
+        </div>
+      </div>
+      <div class="button-area">
+        <a target="_blank" href="https://pure-depths-94459.herokuapp.com/">
+          <button class="btn btn-project">
+            <span class="btn-1"></span>
+            Live Site
+          </button>
+        </a>
+        <a target="_blank" href="https://github.com/canriquez/twittter">
+          <button class="btn btn-project">
+            <span class="btn-3"></span>
+            Github repo
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="item project-container">
+      <!-- project left side -->
+      <div class="left-side">
+        <div class="project-title">
+          <h3>Fundraising Network App </h3>
+        </div>
+        <div class="paragraphs">
+          <p>HTML & CSS Capstone project for a social network web app. </p>
+          <p>Concept project for charity branch in a private organization (Rayces)</p>
+        </div>
+      </div>
+      <!-- project right side -->
+      <div class="right-side">
+        <div class="top-row">
+          <div class="tech">
+            <span class="tag tag-html5"></span>
+            <span class="tag tag-css3"></span>
+            <span class="tag tag-jquery"></span>
+            <span class="tag tag-boots"></span>
+          </div>
+        </div>
+        <div class="app-picture">
+          <img src="<%= asset_path('project_04.jpg') %>" alt="project_01 image">
+        </div>
+      </div>
+      <div class="button-area">
+        <a target="_blank" href="https://canriquez.github.io/htmlcss_capstone/">
+          <button class="btn btn-project">
+            <span class="btn-1"></span>
+            Live Site
+          </button>
+        </a>
+        <a target="_blank" href="https://github.com/canriquez/htmlcss_capstone">
+          <button class="btn btn-project">
+            <span class="btn-3"></span>
+            Github repo
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="item project-container">
+      <!-- project left side -->
+      <div class="left-side">
+        <div class="project-title">
+          <h3>Ruby Bot: Update my #100DaysOfCode Twitter </h3>
+        </div>
+        <div class="paragraphs">
+          <p>Twitter bot that sends daily updates from repo to twitter. </p>
+          <p>Checks github repo, checks twitter updates, sends tweet on gap. emails a report.</p>
+        </div>
+      </div>
+      <!-- project right side -->
+      <div class="right-side">
+        <div class="top-row">
+          <div class="tech">
+            <span class="tag tag-ruby"></span>
+          </div>
+        </div>
+        <div class="app-picture">
+          <img src="<%= asset_path('project_05.gif') %>" alt="project_01 image">
+        </div>
+      </div>
+      <div class="button-area">
+        <a target="_blank" href="https://www.loom.com/share/99420eb2648c423bb910aff5bde6e0b2">
+          <button class="btn btn-project">
+            <span class="btn-4"></span>
+            Showcase
+          </button>
+        </a>
+        <a target="_blank" href="https://github.com/canriquez/ruby-twitter-bot">
+          <button class="btn btn-project">
+            <span class="btn-3"></span>
+            Github repo
           </button>
         </a>
       </div>
@@ -290,10 +433,10 @@
   </div>
   <div class="contact-links">
     <div class="title-icons">
-      <a id="git" href="#"></a>
-      <a id="lin" href="#"></a>
-      <a id="twi" href="#"></a>
-      <a id="sts" href="#"></a>
+      <a id="git"  target="_blank" href="https://github.com/canriquez"></a>
+      <a id="lin"  target="_blank" href="https://www.linkedin.com/in/carlosanriquez/"></a>
+      <a id="twi"  target="_blank" href="https://twitter.com/cranriquez"></a>
+      <a id="sts"  target="_blank" href="https://sourcerer.io/canriquez"></a>
     </div>
   </div>
   <div class="small-form">
@@ -332,6 +475,7 @@
     </form>
   </div>
 </section>
+<!-- Models area -->
 <div id="modals">
   <div id="modal-confirmation" class="card text-center">
     <div class="card-body d-flex flex-column align-items-center">
@@ -346,243 +490,15 @@
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<!-- end modals area -->
+<footer class="text-center">
+  <div class="footer-wrap">
+    <div class="footer-content">
+      <p>&copy 2020 Carlos Anriquez <span>Software</span> development.</p>
+    </div>
+  </div>
+  <!-- button to go back to the top of page -->
+  <a href="#root-home" id="back-up" class="btn btn-sm btn-general btn-home btn-back smooth-scroll">
+    <span>^</span>
+  </a>
+</footer>

@@ -7,6 +7,10 @@ set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
+#after generating certificate:
+
+set :enable_ssl,      true
+
 # Don't change these unless you know what you're doing
 
 set :pty,             true
@@ -23,8 +27,15 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
+set :pg_password, ENV['PORTFOLIO_DATABASE_PASSWORD']
+set :pg_ask_for_password, true
+
 #set :default_shell, "/bin/bash -l"
 set :rvm_type, :system
+append :linked_files, "config/master.key"
+append :linked_files, "config/secrets.yml.key"
+append :linked_files, ".env.production"
 
 ## Defaults:
 # set :scm,           :git
@@ -82,6 +93,32 @@ namespace :deploy do
   after  :finishing,    :restart
 end
 
+
+
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
+
+namespace :rails do
+  desc "Open the rails console"
+  task :console do
+    on roles(:app) do
+      rails_env = fetch(:rails_env, 'production')
+      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails console #{rails_env}"
+    end
+  end
+
+  desc "Open the rails dbconsole"
+  task :dbconsole do
+    on roles(:app) do
+      rails_env = fetch(:rails_env, 'production')
+      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails dbconsole #{rails_env}"
+    end
+  end
+
+  def execute_interactively(command)
+    user = fetch(:user)
+    port = fetch(:port) || 22
+    exec "ssh -l #{user} #{host} -p #{port} -t 'cd #{deploy_to}/current && #{command}'"
+  end
+end

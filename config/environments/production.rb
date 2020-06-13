@@ -47,7 +47,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -94,13 +94,16 @@ Rails.application.configure do
 
 
   # mailer configuration
+  host = 'www.carlosanriquez.com'
+  config.action_mailer.default_url_options = { :host => 'www.carlosanriquez.com', protocol: 'http' }
+
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              '',
+  config.action_mailer.smtp_settings = { 
+  address:              ENV['MAIL_SERVER_ADDRESS'],
   port:                 587,
-  user_name:            '',
-  password:             '',
+  user_name:            ENV['MAIL_USER_NAME'],
+  password:             ENV['MAIL_PASSWORD'],
   authentication:       'plain',
   enable_starttls_auto: true }
 

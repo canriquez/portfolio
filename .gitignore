@@ -37,3 +37,6 @@
 
 
 /config/master.key
+
+#ignoring .env.development
+/.env.development

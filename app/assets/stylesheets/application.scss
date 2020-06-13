@@ -14,8 +14,8 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'owl.carousel';
-@import 'owl.theme.default';
+@import "owl.carousel";
+@import "owl.theme.default";
 
 //***************************
 //**      OWL Carousel    ***
@@ -24,7 +24,6 @@
 .owl-carousel {
     // touch-action: manipulation;
 }
-
 
 //*****************************
 //**     jQuery Validate    ***
@@ -44,26 +43,25 @@ label .form-error {
     margin-bottom: 0;
 }
 
-
 //***************************
 //**      FONTS           ***
 //***************************
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
 
 @font-face {
     font-family: "ProximaThin";
-    src: url("proxima/ProximaNovaThin.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaThin.otf") format("opentype");
 }
 
 @font-face {
     font-family: "ProximaReg";
-    src: url("proxima/ProximaNovaRegular.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaRegular.otf") format("opentype");
 }
 
 @font-face {
     font-family: "ProximaBold";
-    src: url("proxima/ProximaNovaBold.otf") format("opentype");
+    src: asset-url("proxima/ProximaNovaBold.otf") format("opentype");
 }
 
 //#################################
@@ -119,7 +117,7 @@ section {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 
     display: flex;
@@ -140,14 +138,12 @@ section {
         color: black;
         width: 90%;
         line-height: 5vh;
-
     }
 }
 
 //#######################################
 //#            Buttons                  #
 //#######################################
-
 
 .btn-general {
     font-family: "ProximaReg", san-serif;
@@ -156,8 +152,7 @@ section {
     text-transform: uppercase;
     margin: 0 6px;
     padding: 12px 30px 12px 30px;
-    transition: all .5s;
-
+    transition: all 0.5s;
 }
 
 .btn-home {
@@ -207,7 +202,6 @@ section {
     height: 100%;
 }
 
-
 .btn-project:hover,
 .btn-project:focus {
     color: white;
@@ -215,26 +209,59 @@ section {
     border: 1px solid gray;
 }
 
+.button-area a:hover {
+    text-decoration: none !important;
+}
+
 .btn-project .btn-1::after {
-    -webkit-mask: url(link_1.svg) no-repeat 100% 100%;
-    mask: url(link_1.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("link_1.svg") no-repeat 100% 100%;
+    mask: image-url("link_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
 }
 
 .btn-project .btn-2::after {
-    -webkit-mask: url(case_1.svg) no-repeat 100% 100%;
-    mask: url(case_1.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("case_1.svg") no-repeat 100% 100%;
+    mask: image-url("case_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
 }
 
+.btn-project .btn-3::after {
+    -webkit-mask: image-url("git.svg") no-repeat 100% 100%;
+    mask: image-url("git.svg") no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
+
+.btn-project .btn-4::after {
+    -webkit-mask: image-url("video.svg") no-repeat 100% 100%;
+    mask: image-url("video.svg") no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
+}
 
 .btn-project span:hover::after,
 .btn-project span:focus::after {
     background-color: white;
+}
+
+//###### back to UP button
+
+.btn-back {
+    background: red !important;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding: 7px 15px;
+    display: none;
+    border-color: red !important;
+    color: white;
+    z-index: 3;
 }
 
 //#######################################
@@ -243,7 +270,6 @@ section {
 
 //################# Title Icons #############
 
-
 .title-icons {
     margin: 20px 0 10px 0;
     width: 70vw;
@@ -251,7 +277,6 @@ section {
     justify-content: space-around;
     align-items: center;
 }
-
 
 .title-icons a {
     position: relative;
@@ -275,32 +300,32 @@ section {
 }
 
 .title-icons #git::after {
-    -webkit-mask: url(git.svg) no-repeat 100% 100%;
-    mask: url(git.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("git.svg") no-repeat 100% 100%;
+    mask: image-url("git.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #lin::after {
-    -webkit-mask: url(lin.svg) no-repeat 100% 100%;
-    mask: url(lin.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("lin.svg") no-repeat 100% 100%;
+    mask: image-url("lin.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #twi::after {
-    -webkit-mask: url(twi.svg) no-repeat 100% 100%;
-    mask: url(twi.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("twi.svg") no-repeat 100% 100%;
+    mask: image-url("twi.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
 }
 
 .title-icons #sts::after {
-    -webkit-mask: url(sts.svg) no-repeat 100% 100%;
-    mask: url(sts.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("sts.svg") no-repeat 100% 100%;
+    mask: image-url("sts.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
@@ -317,7 +342,8 @@ section {
     margin: 2vh;
 }
 
-.head-title {}
+.head-title {
+}
 
 .head-icon span::after {
     content: "";
@@ -329,8 +355,8 @@ section {
 }
 
 .head-icon #skill-electronics::after {
-    -webkit-mask: url(skill_radio.svg) no-repeat 100% 100%;
-    mask: url(skill_radio.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("skill_radio.svg") no-repeat 100% 100%;
+    mask: image-url("skill_radio.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -338,8 +364,8 @@ section {
 }
 
 .head-icon #skill-software::after {
-    -webkit-mask: url(skill_software.svg) no-repeat 100% 100%;
-    mask: url(skill_software.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("skill_software.svg") no-repeat 100% 100%;
+    mask: image-url("skill_software.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -347,8 +373,8 @@ section {
 }
 
 .head-icon #skill-management::after {
-    -webkit-mask: url(skill_manager1.svg) no-repeat 100% 100%;
-    mask: url(skill_manager1.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("skill_manager1.svg") no-repeat 100% 100%;
+    mask: image-url("skill_manager1.svg") no-repeat 100% 100%;
     background-color: black;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -374,8 +400,8 @@ section {
 }
 
 .quote .left-quote::after {
-    -webkit-mask: url(left-quote.svg) no-repeat 100% 100%;
-    mask: url(left-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("left-quote.svg") no-repeat 100% 100%;
+    mask: image-url("left-quote.svg") no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -385,8 +411,8 @@ section {
 }
 
 .quote .right-quote::after {
-    -webkit-mask: url(right-quote.svg) no-repeat 100% 100%;
-    mask: url(right-quote.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("right-quote.svg") no-repeat 100% 100%;
+    mask: image-url("right-quote.svg") no-repeat 100% 100%;
     background-color: white;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -394,7 +420,6 @@ section {
     top: 100%;
     left: 0;
 }
-
 
 //################# confirmtion SVG/Icon ###########
 
@@ -414,8 +439,8 @@ section {
 }
 
 .confirmation-svg span::after {
-    -webkit-mask: url(thanks_ok.svg) no-repeat 100% 100%;
-    mask: url(thanks_ok.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("thanks_ok.svg") no-repeat 100% 100%;
+    mask: image-url("thanks_ok.svg") no-repeat 100% 100%;
     background-color: green;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -476,7 +501,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: url("home_background.svg") no-repeat;
+    background: image-url("home_background.svg") no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -508,7 +533,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
 
 .title-heading h1 {
     width: 100%;
@@ -542,14 +566,11 @@ section {
     display: inline-block;
     text-align: center;
     line-height: 2.5vh;
-
 }
-
 
 .title-heading .key {
     color: blue;
 }
-
 
 #contact-me {
     margin: 30px 0 10px 0;
@@ -558,7 +579,6 @@ section {
 //#######################################
 //#           move down arrow           #
 //#######################################
-
 
 #move-down,
 #root-move-down {
@@ -581,8 +601,8 @@ section {
 
 #move-down #arrow-down::after,
 #root-move-down #arrow-down-root::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("arrow_down.svg") no-repeat 100% 100%;
+    mask: image-url("arrow_down.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: black;
@@ -593,12 +613,11 @@ section {
 #move-down #arrow-down:focus::after,
 #root-move-down #arrow-down-root:hover::after,
 #root-move-down #arrow-down-root:focus::after {
-    -webkit-mask: url(arrow_down.svg) no-repeat 100% 100%;
-    mask: url(arrow_down.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("arrow_down.svg") no-repeat 100% 100%;
+    mask: image-url("arrow_down.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: gray;
-
 }
 
 //#######################################
@@ -630,8 +649,8 @@ section {
 
 .tag-award {
     display: inline-block;
-    -webkit-mask: url(tag-award.svg) no-repeat 100% 100%;
-    mask: url(tag-award.svg) no-repeat 100% 100%;
+    -webkit-mask: image-url("tag-award.svg") no-repeat 100% 100%;
+    mask: image-url("tag-award.svg") no-repeat 100% 100%;
     background-color: gold;
     height: 24px;
     width: 24px;
@@ -639,37 +658,49 @@ section {
     z-index: 1;
 }
 
-
 .tag-php {
-    background: url("tag-php.svg") no-repeat;
+    background: image-url("tag-php.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-jquery {
-    background: url("tag-jquery.svg") no-repeat;
+    background: image-url("tag-jquery.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-html5 {
-    background: url("tag-html5.svg") no-repeat;
+    background: image-url("tag-html5.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-css3 {
-    background: url("tag-css3.svg") no-repeat;
+    background: image-url("tag-css3.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-boots {
-    background: url("tag-boots.svg") no-repeat;
+    background: image-url("tag-boots.svg") no-repeat;
     z-index: 1;
 }
 
 .tag-mysql {
-    background: url("tag-mysql.svg") no-repeat;
+    background: image-url("tag-mysql.svg") no-repeat;
     z-index: 1;
 }
 
+.tag-rails {
+    background: image-url("tag-rails.svg") no-repeat;
+    z-index: 1;
+}
+
+.tag-ruby {
+    background: image-url("tag-ruby.svg") no-repeat;
+    z-index: 1;
+}
+.tag-postg {
+    background: image-url("tag-postg.svg") no-repeat;
+    z-index: 1;
+}
 
 //#######################################
 //#             about                   #
@@ -728,7 +759,6 @@ section {
     margin: 0;
     padding: 5px 0;
     align-self: flex-start;
-
 }
 
 .section-title h1 {
@@ -767,13 +797,12 @@ section {
     margin: 30px 0 10px 0;
     display: inline-block;
     text-align: left;
-    line-height: 4.0vh;
+    line-height: 4vh;
 }
 
 #get-resume {
     margin: 20px;
 }
-
 
 //#######################################
 //#        project-container            #
@@ -790,7 +819,7 @@ section {
     padding: 20px;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -803,7 +832,6 @@ section {
 .left-side .paragraphs p {
     font-size: 3vh;
     line-height: 3.5vh;
-
 }
 
 .project-container .left-side,
@@ -822,6 +850,9 @@ section {
     justify-content: space-between;
 }
 
+.left-side .button-area a:hover {
+    text-decoration: none !important;
+}
 
 .right-side .app-picture {
     position: relative;
@@ -831,12 +862,17 @@ section {
 }
 
 .right-side .app-picture img {
+    position: relative;
     display: block;
     z-index: 1;
     width: 100%;
 }
 
 .right-side .award-batch {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 20px;
 }
 
@@ -860,7 +896,6 @@ section {
 //#        Skills Section               #
 //#######################################
 
-
 .skills-column {
     position: relative;
     height: 85vh;
@@ -872,7 +907,7 @@ section {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08), 0 5px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
 
@@ -946,8 +981,7 @@ section {
     margin-bottom: 1vh;
 }
 
-#management ul li:nth-child(3)::after,
-    {
+#management ul li:nth-child(3)::after {
     content: "3";
     position: absolute;
     top: -3px;
@@ -987,7 +1021,7 @@ section {
 #quote-section .section-content {
     position: relative;
     height: 35vh;
-    background-image: url("quote_background.jpg");
+    background-image: image-url("quote_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1041,7 +1075,6 @@ section {
     border: solid 1px;
     border-color: #949494;
 
-
     .head-picture {
         position: relative;
         background: url("https://hackernoon.com/drafts/2x20361b.png");
@@ -1050,7 +1083,7 @@ section {
         flex-grow: 2;
 
         .picture-label {
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: "IBM Plex Mono", monospace;
             font-size: 4vh;
             font-weight: 700;
             position: absolute;
@@ -1060,7 +1093,6 @@ section {
             padding: 3px 10px;
             color: white;
         }
-
     }
 
     .head-picture-medium {
@@ -1071,7 +1103,7 @@ section {
         flex-grow: 2;
 
         .picture-label {
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: "IBM Plex Mono", monospace;
             font-size: 4vh;
             font-weight: 700;
             position: absolute;
@@ -1081,7 +1113,6 @@ section {
             padding: 3px 10px;
             color: white;
         }
-
     }
 
     .story-title {
@@ -1110,7 +1141,7 @@ section {
         align-items: center;
         height: 10%;
         width: 100%;
-        background: #CDCDCD;
+        background: #cdcdcd;
 
         .status {
             margin-left: 1vh;
@@ -1129,7 +1160,6 @@ section {
             font-size: 2.2vh;
             padding: 5px;
         }
-
     }
 }
 
@@ -1151,13 +1181,10 @@ section {
     .title-heading h1 {
         font-size: 3.8vh;
         text-align: center;
-
     }
 
     .contact-links {
         margin: 5vh auto;
-
-
 
         .title-icons {
             text-align: center;
@@ -1168,7 +1195,8 @@ section {
 
     .small-form {
         border-radius: 4px;
-        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08),
+            0 5px 15px rgba(0, 0, 0, 0.08);
         padding: 1vh;
         width: 90%;
         margin: 0 auto;
@@ -1201,11 +1229,7 @@ section {
         #message {
             height: 8vh;
         }
-
-
     }
-
-
 }
 
 //##### making captcha room
@@ -1216,12 +1240,10 @@ section {
     transform-origin: 0 0;
 }
 
-
 #get-in-touch .small-form {
     padding: 0;
     box-shadow: none;
 }
-
 
 #get-in-touch .small-form p {
     display: none;
@@ -1234,7 +1256,109 @@ section {
     width: 100%;
 }
 
+//#######################################
+//#        footer                       #
+//#######################################
 
+footer {
+    background: #212226;
+    padding: 30px;
+}
+
+footer p {
+    color: #fff;
+    line-height: 4vh;
+    font-size: 2vh;
+}
+
+footer p span {
+    color: yellow;
+}
+
+//#######################################
+//#        navigation                   #
+//#######################################
+
+.navbar {
+    padding: 10px 5px 10px 5px;
+    transition: all 0.5s;
+}
+
+.nav-wrap {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+        border-radius: 100%;
+        width: 55px;
+        margin-right: 20px;
+    }
+    p {
+        font-family: "ProximaReg", sans-serif;
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        margin: 0px;
+        color: black;
+    }
+}
+
+ul.navbar-nav > li > a {
+    font-family: "ProximaReg", sans-serif;
+    padding: 10px;
+    color: #000;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+    background: none;
+    color: red;
+}
+//White navigation
+.nav-top {
+    background: black;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+
+    ul.navbar-nav > li > a {
+        color: white;
+    }
+
+    ul.navbar-nav > li > a:hover,
+    ul.navbar-nav > li > a:focus {
+        background: none;
+        color: red;
+    }
+
+    .navbar-brand {
+        padding-top: 10px;
+        p {
+            font-family: "ProximaReg", sans-serif;
+            font-size: 2.5vw;
+            text-transform: uppercase;
+            margin: 0px;
+            color: white;
+            /*  span {
+                    display: none;
+                } */
+        }
+    }
+}
+
+ul.navbar-nav > li.active > a {
+    color: red;
+}
 
 //###################################################
 //#           XS- screen media query               #
@@ -1248,7 +1372,6 @@ section {
     }
 
     //##### quote-section
-
 
     .quote p {
         font-size: 3.5vh;
@@ -1273,16 +1396,14 @@ section {
 
     .g-recaptcha {
         margin: 0 auto;
-        transform: scale(0.90);
+        transform: scale(0.9);
         transform-origin: 0 0;
     }
-
 
     #get-in-touch .small-form {
         padding: 0;
         box-shadow: none;
     }
-
 
     #get-in-touch .small-form p {
         display: none;
@@ -1293,7 +1414,6 @@ section {
         margin-top: 1vh;
         width: 100%;
     }
-
 }
 
 //###################################################
@@ -1307,13 +1427,11 @@ section {
         height: 100%;
     }
 
-
     #contact-me,
     #get-resume,
     #move-down {
         display: none;
     }
-
 
     #home {
         width: 50%;
@@ -1348,7 +1466,6 @@ section {
         padding: 0;
         width: 100;
         text-align: left;
-
     }
 
     #main-title h4 {
@@ -1366,7 +1483,6 @@ section {
         margin-top: 20%;
         width: 3rem;
         height: 3rem;
-
     }
 
     .title-icons a::after {
@@ -1407,7 +1523,7 @@ section {
 
     .paragraphs .mobile {
         font-family: "ProximaThin";
-        font-size: 5.0rem;
+        font-size: 5rem;
     }
 
     //########### root buttons ############
@@ -1450,12 +1566,10 @@ section {
         width: 46%;
     }
 
-
     .project-container .right-side {
         width: 49%;
         justify-content: center;
     }
-
 
     .project-container .button-area {
         width: 100%;
@@ -1471,7 +1585,6 @@ section {
         height: auto;
         margin: 30px 0px;
     }
-
 
     //########## skills section ######
 
@@ -1499,7 +1612,6 @@ section {
     .storycard {
         height: 80vh;
 
-
         .head-picture {
             flex-grow: 2;
 
@@ -1516,8 +1628,6 @@ section {
         .story-short {
             margin: 0 2vh 2vh 2vh;
         }
-
-
     }
 
     .storycard:first-child {
@@ -1545,7 +1655,6 @@ section {
         width: 90%;
     }
 
-
     //###### adjusting for captcha in form
 
     #get-in-touch .small-form p {
@@ -1558,7 +1667,6 @@ section {
         justify-content: space-between;
         flex-wrap: nowrap;
         align-items: center;
-
     }
 
     #get-in-touch #sbt-btn {
@@ -1568,20 +1676,15 @@ section {
     #get-in-touch #submit-btn {
         margin: 0;
         height: 8vh;
-
     }
-
 
     .small-form {
         padding: 10px 0;
         width: 75%;
         border-radius: 4px;
-        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
-
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08),
+            0 5px 15px rgba(0, 0, 0, 0.08);
     }
-
-
-
 }
 
 //###################################################
@@ -1614,7 +1717,7 @@ section {
 
     .paragraphs .mobile {
         font-family: "ProximaThin";
-        font-size: 4.0rem;
+        font-size: 4rem;
         margin: 20px 0 10px 0;
         display: inline-block;
         text-align: left;
@@ -1628,7 +1731,8 @@ section {
         flex-direction: row;
         flex-wrap: nowrap;
         border-radius: 4px;
-        box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08),
+            0 5px 15px rgba(0, 0, 0, 0.08);
         justify-content: center;
         height: 90vh;
     }
@@ -1647,8 +1751,7 @@ section {
     .skills-column:nth-child(2) {
         border-left: solid 0.5px;
         border-right: solid 0.5px;
-        border-color: #DCDCDC;
-
+        border-color: #dcdcdc;
     }
 
     .skills-column .head-sub-title h3 {
@@ -1673,8 +1776,6 @@ section {
     }
 
     //########### get in touch  ############
-
-
 
     #get-in-touch {
         .title-heading {
@@ -1701,18 +1802,17 @@ section {
             padding: 10px 0;
             width: 75%;
             border-radius: 4px;
-            box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .08), 0 5px 15px rgba(0, 0, 0, .08);
-
+            box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08),
+                0 5px 15px rgba(0, 0, 0, 0.08);
         }
     }
 
     .g-recaptcha {
         margin: 0 auto;
-        transform: scale(0.90);
+        transform: scale(0.9);
         transform-origin: 0 0;
         flex-grow: 1;
     }
-
 }
 
 //###################################################
@@ -1731,7 +1831,7 @@ section {
     //######### projects section ###################
 
     .left-side .paragraphs p {
-        font-size: 2.2vw;
+        font-size: 2vw;
         line-height: 3vw;
     }
 
@@ -1742,7 +1842,7 @@ section {
 
     .award-batch span {
         margin: 3px 6px;
-        font-size: 1.8vw;
+        font-size: 1.2vw;
     }
 
     .tag {
@@ -1751,10 +1851,9 @@ section {
         margin: 6px;
     }
 
-
     .tag-award {
-        height: 4rem;
-        width: 4rem;
+        height: 2.5rem;
+        width: 2.5rem;
         margin-left: 3px;
     }
 
@@ -1768,6 +1867,5 @@ section {
 
     #get-in-touch .small-form {
         width: 60%;
-
     }
 }

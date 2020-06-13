@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: portfolio_production
+  pool: 5
+  username: <%= ENV['PORTFOLIO_DATABASE_USER'] %>
+  password: <%= ENV['POTFOLIO_DATABASE_PASSWORD'] %>
