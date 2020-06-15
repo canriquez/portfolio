@@ -26,11 +26,11 @@
 
 document.addEventListener("turbolinks:load", function () {
     $("#projects-carousel").owlCarousel({
-        loop: true,
+        loop: false,
         autoplayHoverPause: true,
         margin: 10,
         items: 1,
-        autoplay: true,
+        autoplay: false,
         smartSpeed: 700,
         autoplayTimeout: 5000
     });
@@ -154,22 +154,26 @@ document.addEventListener("turbolinks:load", function () {
      ==========================================================*/
     showHideNavbar();
 
-
-    $(window).scroll(function () {
-        showHideNavbar();
+    $(window).on("load", function () {
+        $(window).scroll(function () {
+            showHideNavbar();
+            console.log($(window).scrollTop())
+        });
     });
+
 
     function showHideNavbar() {
         if ($(window).scrollTop() > 50) {
-            // shows nav 
+            // shows black nav 
             $("nav").addClass("nav-top");
+            // shows back up button
             $("#back-up").fadeIn();
         } else {
 
-            //hides nav
+            //hides black nav
             $("nav").removeClass("nav-top");
 
-            // shows back button
+            // shows back up button
             $("#back-up").fadeOut();
 
         }
