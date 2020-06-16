@@ -280,9 +280,12 @@ section {
 
 .title-icons a {
     position: relative;
-    width: 4vh;
-    height: 4vh;
+    width: 7vh;
+    height: 7vh;
     transition: all 200ms ease-in-out;
+    box-shadow: 6px 6px 11px #727272, -6px -6px 11px #ffffff;
+    border-radius: 9px;
+    margin-top: 1px;
 }
 
 .title-icons a:hover {
@@ -294,9 +297,8 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 18px;
+    width: 7vh;
+    height: 7vh;
 }
 
 .title-icons #git::after {
@@ -342,8 +344,7 @@ section {
     margin: 2vh;
 }
 
-.head-title {
-}
+.head-title {}
 
 .head-icon span::after {
     content: "";
@@ -701,6 +702,7 @@ section {
     background: image-url("tag-ruby.svg") no-repeat;
     z-index: 1;
 }
+
 .tag-postg {
     background: image-url("tag-postg.svg") no-repeat;
     z-index: 1;
@@ -780,7 +782,7 @@ section {
 }
 
 //#######################################
-//#                   #
+//#              projects               #
 //#######################################
 
 .project-container {
@@ -882,14 +884,14 @@ section {
     position: relative;
     height: 85vh;
     margin: 4vh auto;
-    padding: 2vh;
+    padding: 0 2vh;
     width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 4px;
-    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.08), 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 6px 6px 11px #727272, -6px -6px 11px #ffffff;
     overflow: hidden;
 }
 
@@ -1052,7 +1054,7 @@ section {
     width: 85vw;
     margin: 6vh auto;
     height: 70vh;
-    box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.58);
+    box-shadow: 6px 6px 11px #727272, -6px -6px 11px #ffffff;
     overflow: hidden;
     border: solid 1px;
     border-color: #949494;
@@ -1280,11 +1282,13 @@ footer p span {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
     img {
         border-radius: 100%;
         width: 55px;
         margin-right: 20px;
     }
+
     p {
         font-family: "ProximaReg", sans-serif;
         font-size: 2.5vw;
@@ -1294,7 +1298,7 @@ footer p span {
     }
 }
 
-ul.navbar-nav > li > a {
+ul.navbar-nav>li>a {
     font-family: "ProximaReg", sans-serif;
     padding: 10px;
     color: #000;
@@ -1302,29 +1306,31 @@ ul.navbar-nav > li > a {
     text-transform: uppercase;
 }
 
-ul.navbar-nav > li > a:hover,
-ul.navbar-nav > li > a:focus {
+ul.navbar-nav>li>a:hover,
+ul.navbar-nav>li>a:focus {
     background: none;
     color: red;
 }
+
 //White navigation
 .nav-top {
     background: black;
     box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 3;
 
-    ul.navbar-nav > li > a {
+    ul.navbar-nav>li>a {
         color: white;
     }
 
-    ul.navbar-nav > li > a:hover,
-    ul.navbar-nav > li > a:focus {
+    ul.navbar-nav>li>a:hover,
+    ul.navbar-nav>li>a:focus {
         background: none;
         color: red;
     }
 
     .navbar-brand {
         padding-top: 10px;
+
         p {
             font-family: "ProximaReg", sans-serif;
             font-size: 2.5vw;
@@ -1338,7 +1344,7 @@ ul.navbar-nav > li > a:focus {
     }
 }
 
-ul.navbar-nav > li.active > a {
+ul.navbar-nav>li.active>a {
     color: red;
 }
 
