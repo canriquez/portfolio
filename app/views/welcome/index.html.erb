@@ -2,16 +2,14 @@
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <div class="nav-wrap">
-        <div class="">
-          <!-- mobile menu burger -->
-          <a href="#root-home" class="navbar-brand smooth-scroll">
-            <img src="<%= asset_path('avatar.jpg') %>" alt="Carlos Anriquez">
-            <p>C<span>arlos</span> A<span>nriquez</span> </p>
-          </a>
-          <span class="header-burger">
-            <span></span>
-          </span>
-        </div>
+        <!-- mobile menu burger -->
+        <a href="#root-home" class="navbar-brand smooth-scroll">
+          <img src="<%= asset_path('avatar.jpg') %>" alt="Carlos Anriquez">
+          <p>C<span>arlos</span> A<span>nriquez</span> </p>
+        </a>
+        <span class="header-burger">
+          <span></span>
+        </span>
         <!-- menu options -->
         <div class="options-wrap">
           <div class="collapse navbar-collapse">
@@ -47,9 +45,9 @@
     <div id="home-title">
       <div id="main-title">
         <div class="title-heading">
-          <h1 id="title-heading-1">web developer</h1>
+          <h1 id="title-heading-1"><span class="key">web developer</span></h1>
           <h1 id="title-heading-2">engineering</h1>
-          <h1 id="title-heading-3"><span class="key">management</span></h1>
+          <h1 id="title-heading-3"><span>management</span></h1>
         </div>
         <div id="title-sub-heading">
           <h3>formerly head of mobile access engineering @telefonica_de</h3>
@@ -486,7 +484,7 @@
               <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
             </div>
             <div id="sbt-btn">
-              <input id="submit-btn" class="btn btn-general" type="submit" value="Send">
+              <input id="submit-btn" class="btn btn-general btn-home" type="submit" value="Send">
             </div>
           </div>
         </form>
@@ -511,7 +509,7 @@
     <footer class="text-center">
       <div class="footer-wrap">
         <div class="footer-content">
-          <p>&copy 2020 Carlos Anriquez | <span>Software</span> Development | Engineering</p>
+          <p>&copy <%= copy_year %> Carlos Anriquez | <span>Software Development </span> | Engineering</p>
         </div>
       </div>
       <!-- button to go back to the top of page -->
