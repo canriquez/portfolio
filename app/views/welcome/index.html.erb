@@ -78,441 +78,442 @@
         <h1>About me</h1>
       </div>
       <div class="paragraphs">
-        <p class="mobile pc">Technology, Electronics, and the beauty of simple engineering solutions are my passion.</p>
+        <p class="mobile pc">I enjoy Technology, Electronics, Software, and the beauty of simple engineering solutions.</p>
         <p class="pc"><br>
           <br>
-          Life brought change and excellent opportunities in the telecom industry. I managed small projects, big projects, and also great teams.</p>
-        <p class="mobile ipad"> Telecoms allowed me to work with great people across 13 countries and the chance to live in big cities like Buenos Aires, London, and Munich.</p>
-        <p class="mobile pc">After 17 years in telecom, I have now started my adventure in the software development industry, and I am loving it. </p>
+          I believe in the power of good habits, and that a growth mindset can support achieving any goal. Becoming an engineer and now software developer is for me proof that you can make anything happen when you focus.        
+          <p class="mobile ipad"> My professional experience allowed me to work with great people across 13 countries and the chance to live in big cities like Buenos Aires, London, and Munich.</p>
+          <p class="mobile pc"> Today, full stack web development is my joy and the platform to take on new projects and keep learning. <br>
+            Look around and learn a little more about my work. </p>
+        </div>
+        <div id="get-resume">
+          <%= link_to "Get my resume", welcome_download_resume_path, 
+        class: "btn btn-general btn-home", 
+        data: { :'no-turbolink' => true } %>
+        </div>
       </div>
-      <div id="get-resume">
+    </section>
+    <div id="root-buttons">
+      <div id="contact-me-root">
+        <a class="btn btn-general btn-home smooth-scroll" href="#get-in-touch" title="Contact Me Now" role="button">Contact Me Now</a>
+      </div>
+      <div id="root-move-down">
+        <a id="arrow-down-root" href="#projects"></a>
+      </div>
+      <div id="resume-me-root">
         <%= link_to "Get my resume", welcome_download_resume_path, 
         class: "btn btn-general btn-home", 
         data: { :'no-turbolink' => true } %>
       </div>
     </div>
+  </div>
+  <section id="projects" class="base-section">
+    <div class="section-title">
+      <h1>Selected projects</h1>
+    </div>
+    <div id="projects-carousel" class="owl-carousel owl-theme">
+      <div class="item project-container">
+        <!-- project left side -->
+        <div class="left-side">
+          <div class="project-title">
+            <h3>Web Site : rayces.com</h3>
+          </div>
+          <div class="paragraphs">
+            <p>Complete responsive website design and implementation.</p>
+            <p>Interfacing the customer in all required steps (Wireframing, design and implementation)</p>
+          </div>
+        </div>
+        <!-- project right side -->
+        <div class="right-side">
+          <div class="top-row">
+            <div class="tech">
+              <span class="tag tag-html5"></span>
+              <span class="tag tag-css3"></span>
+              <span class="tag tag-boots"></span>
+              <span class="tag tag-php"></span>
+              <span class="tag tag-jquery"></span>
+              <span class="tag tag-mysql"></span>
+            </div>
+          </div>
+          <div class="app-picture">
+            <img class="project-img" src="<%= asset_path('project_01.jpg') %>" alt="project_01 image">
+          </div>
+          <div class="award-batch">
+            <span class="tag-award"></span>
+            <span>Happy Customer</span>
+          </div>
+        </div>
+        <div class="button-area">
+          <a target="_blank" href="https://www.rayces.com">
+            <button class="btn btn-project">
+              <span class="btn-1"></span>
+              Live Site
+            </button>
+          </a>
+          <a href="#projects">
+            <button class="btn btn-project">
+              <span class="btn-2"></span>
+              Case Study
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="item project-container">
+        <!-- project left side -->
+        <div class="left-side">
+          <div class="project-title">
+            <h3>Newsweek Clone</h3>
+          </div>
+          <div class="paragraphs">
+            <p>Complete responsive web site clone from Newsweek Magazine.</p>
+            <p>Applied solution uses bootstrap framework and customised CSS classes. </p>
+          </div>
+        </div>
+        <!-- project right side -->
+        <div class="right-side">
+          <div class="top-row">
+            <div class="tech">
+              <span class="tag tag-html5"></span>
+              <span class="tag tag-css3"></span>
+              <span class="tag tag-boots"></span>
+              <span class="tag tag-jquery"></span>
+            </div>
+          </div>
+          <div class="app-picture">
+            <img src="<%= asset_path('project_02.jpg') %>" alt="project_01 image">
+          </div>
+        </div>
+        <div class="button-area">
+          <a target="_blank" href="https://canriquez.github.io/using-bootstrap/">
+            <button class="btn btn-project">
+              <span class="btn-1"></span>
+              Live Site
+            </button>
+          </a>
+          <a target="_blank" href="https://github.com/canriquez/using-bootstrap">
+            <button class="btn btn-project">
+              <span class="btn-3"></span>
+              Github repo
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="item project-container">
+        <!-- project left side -->
+        <div class="left-side">
+          <div class="project-title">
+            <h3>Twittter app</h3>
+          </div>
+          <div class="paragraphs">
+            <p>Building a Full Stack Twitter Clone </p>
+            <p>Sessions, Cookies, Authentication </p>
+          </div>
+        </div>
+        <!-- project right side -->
+        <div class="right-side">
+          <div class="top-row">
+            <div class="tech">
+              <span class="tag tag-html5"></span>
+              <span class="tag tag-css3"></span>
+              <span class="tag tag-ruby"></span>
+              <span class="tag tag-rails"></span>
+              <span class="tag tag-postg"></span>
+            </div>
+          </div>
+          <div class="app-picture">
+            <img src="<%= asset_path('project_03.jpg') %>" alt="project_01 image">
+          </div>
+        </div>
+        <div class="button-area">
+          <a target="_blank" href="https://pure-depths-94459.herokuapp.com/">
+            <button class="btn btn-project">
+              <span class="btn-1"></span>
+              Live Site
+            </button>
+          </a>
+          <a target="_blank" href="https://github.com/canriquez/twittter">
+            <button class="btn btn-project">
+              <span class="btn-3"></span>
+              Github repo
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="item project-container">
+        <!-- project left side -->
+        <div class="left-side">
+          <div class="project-title">
+            <h3>Fundraising Network App </h3>
+          </div>
+          <div class="paragraphs">
+            <p>HTML & CSS Capstone project for a social network web app. </p>
+            <p>Concept project for charity branch in a private organization (Rayces)</p>
+          </div>
+        </div>
+        <!-- project right side -->
+        <div class="right-side">
+          <div class="top-row">
+            <div class="tech">
+              <span class="tag tag-html5"></span>
+              <span class="tag tag-css3"></span>
+              <span class="tag tag-jquery"></span>
+              <span class="tag tag-boots"></span>
+            </div>
+          </div>
+          <div class="app-picture">
+            <img src="<%= asset_path('project_04.jpg') %>" alt="project_01 image">
+          </div>
+        </div>
+        <div class="button-area">
+          <a target="_blank" href="https://canriquez.github.io/htmlcss_capstone/">
+            <button class="btn btn-project">
+              <span class="btn-1"></span>
+              Live Site
+            </button>
+          </a>
+          <a target="_blank" href="https://github.com/canriquez/htmlcss_capstone">
+            <button class="btn btn-project">
+              <span class="btn-3"></span>
+              Github repo
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="item project-container">
+        <!-- project left side -->
+        <div class="left-side">
+          <div class="project-title">
+            <h3>Ruby Bot: <span class="hide_big">Update my</span> #100DaysOfCode <span class="hide_big">on Twitter</span> </h3>
+          </div>
+          <div class="paragraphs">
+            <p>Twitter bot that sends daily updates from repo to Twitter. </p>
+            <p>Checks Github repo, checks Twitter updates, sends tweet on gap.</p>
+          </div>
+        </div>
+        <!-- project right side -->
+        <div class="right-side">
+          <div class="top-row">
+            <div class="tech">
+              <span class="tag tag-ruby"></span>
+            </div>
+          </div>
+          <div class="app-picture">
+            <img src="<%= asset_path('project_05.gif') %>" alt="project_01 image">
+          </div>
+        </div>
+        <div class="button-area">
+          <a target="_blank" href="https://www.loom.com/share/99420eb2648c423bb910aff5bde6e0b2">
+            <button class="btn btn-project">
+              <span class="btn-4"></span>
+              Showcase
+            </button>
+          </a>
+          <a target="_blank" href="https://github.com/canriquez/ruby-twitter-bot">
+            <button class="btn btn-project">
+              <span class="btn-3"></span>
+              Github repo
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
-  <div id="root-buttons">
-    <div id="contact-me-root">
-      <a class="btn btn-general btn-home smooth-scroll" href="#get-in-touch" title="Contact Me Now" role="button">Contact Me Now</a>
+  <section id="skills" class="base-section">
+    <div class="section-title">
+      <h1>Skills</h1>
     </div>
-    <div id="root-move-down">
-      <a id="arrow-down-root" href="#projects"></a>
-    </div>
-    <div id="resume-me-root">
-      <%= link_to "Get my resume", welcome_download_resume_path, 
-        class: "btn btn-general btn-home", 
-        data: { :'no-turbolink' => true } %>
-    </div>
-  </div>
-</div>
-<section id="projects" class="base-section">
-  <div class="section-title">
-    <h1>Selected projects</h1>
-  </div>
-  <div id="projects-carousel" class="owl-carousel owl-theme">
-    <div class="item project-container">
-      <!-- project left side -->
-      <div class="left-side">
-        <div class="project-title">
-          <h3>Web Site : rayces.com</h3>
+    <div id="skills-flex">
+      <div id="electronics" class="skills-column">
+        <div class="head-icon">
+          <span id="skill-electronics"></span>
         </div>
-        <div class="paragraphs">
-          <p>Complete responsive website design and implementation.</p>
-          <p>Interfacing the customer in all required steps (Wireframing, design and implementation)</p>
+        <div class="head-title">
+          <h2>Telecoms | Electronics</h2>
         </div>
+        <div class="skill-text">
+          <p>BA in Electronics Engineering. Extensive experience on wireless mobile Telecoms engineering @telefonica.</p>
+        </div>
+        <div class="head-sub-title">
+          <h3>Experience working with</h3>
+        </div>
+        <ul class="skill-list">
+          <li>LAN/WAN Networks</i>
+          <li>2G/3G/4G(LTE) air inteface</i>
+          <li>RAN Capacity Panning</li>
+          <li>RAN Performance Optimization</li>
+          <li>Site design optimisation</li>
+          <li>Factory rollout optimization</li>
+          <p class="note">(*) RAN: Radio Access Network</p>
+        </ul>
       </div>
-      <!-- project right side -->
-      <div class="right-side">
-        <div class="top-row">
-          <div class="tech">
-            <span class="tag tag-html5"></span>
-            <span class="tag tag-css3"></span>
-            <span class="tag tag-boots"></span>
-            <span class="tag tag-php"></span>
-            <span class="tag tag-jquery"></span>
-            <span class="tag tag-mysql"></span>
+      <div id="software" class="skills-column">
+        <div class="head-icon">
+          <span id="skill-software"></span>
+        </div>
+        <div class="head-title">
+          <h2>software | development</h2>
+        </div>
+        <div class="skill-text">
+          <p>1500 hs training @microverseinc <br>
+            Experience with HTML/CSS Freelance projects. I love building projects to solve problems.</p>
+        </div>
+        <div class="head-sub-title">
+          <h3>Experience working with</h3>
+        </div>
+        <ul class="skill-list">
+          <li>HTML5 | CSS3 | SASS</li>
+          <li>SQL | SQLite | Postgresql</li>
+          <li>Ruby | Ruby on Rails</li>
+          <li class="ongoing">(Javascript | React | Redux)</li>
+          <li>Python</li>
+          <p class="note">1: ongoing training - @microverseinc</p>
+        </ul>
+      </div>
+      <div id="management" class="skills-column">
+        <div class="head-icon">
+          <span id="skill-management"></span>
+        </div>
+        <div class="head-title">
+          <h2>Management | Leadership</h2>
+        </div>
+        <div class="skill-text">
+          <p>MBA General Management. 16 years experience in Telecoms Industry. 10 years leading engineering teams. </p>
+        </div>
+        <div class="head-sub-title">
+          <h3>Experience working as</h3>
+        </div>
+        <ul class="skill-list">
+          <li>Head of Mobile Access</li>
+          <li>Corp. Head of Access Infra </li>
+          <li>PMO Line Manager</li>
+          <li>Radio Planning Manager</li>
+          <p class="note">1: Munich - 2: London - 3: Buenos Aires</p>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="quote-section" class="base-section">
+    <div class="section-content">
+      <div class="quote">
+        <p><span class="left-quote"></span>You do not rise to the level of your goals. You fall to the level of your systems.<span class="right-quote"></span></p>
+        <h4>James Clear | Atomic Habits</h4>
+      </div>
+    </div>
+  </section>
+  <section id="publications" class="base-section">
+    <div class="section-title">
+      <h1>Publications</h1>
+    </div>
+    <div id="pub-container" class="section-content">
+      <div class="storycard">
+        <div class="head-picture-medium">
+          <div class="picture-label">Medium</div>
+        </div>
+        <div class="story-title">
+          <a  href="https://medium.com/swlh/3-ideas-and-6-steps-you-need-to-leapfrog-careers-into-html-css-ba9db2a4588b">3 Ideas and 6 Steps You Need to Leapfrog Careers Into html/Css</a>
+        </div>
+        <div class="story-short">
+          <p class="story-teaser">Change is hard, and as a goal, software development is not easy at all. After working 17 years in Telecoms, I am now in the middle of a career change. </p>
+        </div>
+        <div class="story-bottom">
+          <div class="tags">
+            <div class="status">published</div>
           </div>
-        </div>
-        <div class="app-picture">
-          <img class="project-img" src="<%= asset_path('project_01.jpg') %>" alt="project_01 image">
-        </div>
-        <div class="award-batch">
-          <span class="tag-award"></span>
-          <span>Happy Customer</span>
+          <div class="when"><%= post_age('07-02-2020') %> ago.</div>
         </div>
       </div>
-      <div class="button-area">
-        <a target="_blank" href="https://www.rayces.com">
-          <button class="btn btn-project">
-            <span class="btn-1"></span>
-            Live Site
-          </button>
-        </a>
-        <a href="#projects">
-          <button class="btn btn-project">
-            <span class="btn-2"></span>
-            Case Study
-          </button>
-        </a>
-      </div>
-    </div>
-    <div class="item project-container">
-      <!-- project left side -->
-      <div class="left-side">
-        <div class="project-title">
-          <h3>Newsweek Clone</h3>
+      <div class="storycard">
+        <div class="head-picture">
+          <div class="picture-label">Hackernoon</div>
         </div>
-        <div class="paragraphs">
-          <p>Complete responsive web site clone from Newsweek Magazine.</p>
-          <p>Applied solution uses bootstrap framework and customised CSS classes. </p>
+        <div class="story-title">
+          <a  href="https://hackernoon.com/a-beginners-guide-to-making-a-career-as-an-htmlcss-developer-hy9832n9">A Beginner's Guide to Making a Career As an HTML/CSS Developer</a>
         </div>
-      </div>
-      <!-- project right side -->
-      <div class="right-side">
-        <div class="top-row">
-          <div class="tech">
-            <span class="tag tag-html5"></span>
-            <span class="tag tag-css3"></span>
-            <span class="tag tag-boots"></span>
-            <span class="tag tag-jquery"></span>
+        <div class="story-short">
+          <p class="story-teaser">Change is hard, and as a goal, software development is not easy at all. After working 17 years in Telecoms, I am now in the middle of a career change. </p>
+        </div>
+        <div class="story-bottom">
+          <div class="tags">
+            <div class="status">published</div>
           </div>
+          <div class="when"><%= post_age('9-05-2020') %> ago.</div>
         </div>
-        <div class="app-picture">
-          <img src="<%= asset_path('project_02.jpg') %>" alt="project_01 image">
-        </div>
-      </div>
-      <div class="button-area">
-        <a target="_blank" href="https://canriquez.github.io/using-bootstrap/">
-          <button class="btn btn-project">
-            <span class="btn-1"></span>
-            Live Site
-          </button>
-        </a>
-        <a target="_blank" href="https://github.com/canriquez/using-bootstrap">
-          <button class="btn btn-project">
-            <span class="btn-3"></span>
-            Github repo
-          </button>
-        </a>
       </div>
     </div>
-    <div class="item project-container">
-      <!-- project left side -->
-      <div class="left-side">
-        <div class="project-title">
-          <h3>Twittter app</h3>
-        </div>
-        <div class="paragraphs">
-          <p>Building a Full Stack Twitter Clone </p>
-          <p>Sessions, Cookies, Authentication </p>
-        </div>
-      </div>
-      <!-- project right side -->
-      <div class="right-side">
-        <div class="top-row">
-          <div class="tech">
-            <span class="tag tag-html5"></span>
-            <span class="tag tag-css3"></span>
-            <span class="tag tag-ruby"></span>
-            <span class="tag tag-rails"></span>
-            <span class="tag tag-postg"></span>
-          </div>
-        </div>
-        <div class="app-picture">
-          <img src="<%= asset_path('project_03.jpg') %>" alt="project_01 image">
-        </div>
-      </div>
-      <div class="button-area">
-        <a target="_blank" href="https://pure-depths-94459.herokuapp.com/">
-          <button class="btn btn-project">
-            <span class="btn-1"></span>
-            Live Site
-          </button>
-        </a>
-        <a target="_blank" href="https://github.com/canriquez/twittter">
-          <button class="btn btn-project">
-            <span class="btn-3"></span>
-            Github repo
-          </button>
-        </a>
+  </section>
+  <section id="get-in-touch" class="base-section">
+    <div class="title-heading">
+      <h1 id="title-heading-1">Get in touch with me</h1>
+    </div>
+    <div class="contact-links">
+      <div class="title-icons in-touch">
+        <a id="git"  target="_blank" href="https://github.com/canriquez"></a>
+        <a id="lin"  target="_blank" href="https://www.linkedin.com/in/carlosanriquez/"></a>
+        <a id="twi"  target="_blank" href="https://twitter.com/cranriquez"></a>
+        <a id="sts"  target="_blank" href="https://sourcerer.io/canriquez"></a>
       </div>
     </div>
-    <div class="item project-container">
-      <!-- project left side -->
-      <div class="left-side">
-        <div class="project-title">
-          <h3>Fundraising Network App </h3>
-        </div>
-        <div class="paragraphs">
-          <p>HTML & CSS Capstone project for a social network web app. </p>
-          <p>Concept project for charity branch in a private organization (Rayces)</p>
-        </div>
-      </div>
-      <!-- project right side -->
-      <div class="right-side">
-        <div class="top-row">
-          <div class="tech">
-            <span class="tag tag-html5"></span>
-            <span class="tag tag-css3"></span>
-            <span class="tag tag-jquery"></span>
-            <span class="tag tag-boots"></span>
-          </div>
-        </div>
-        <div class="app-picture">
-          <img src="<%= asset_path('project_04.jpg') %>" alt="project_01 image">
-        </div>
-      </div>
-      <div class="button-area">
-        <a target="_blank" href="https://canriquez.github.io/htmlcss_capstone/">
-          <button class="btn btn-project">
-            <span class="btn-1"></span>
-            Live Site
-          </button>
-        </a>
-        <a target="_blank" href="https://github.com/canriquez/htmlcss_capstone">
-          <button class="btn btn-project">
-            <span class="btn-3"></span>
-            Github repo
-          </button>
-        </a>
-      </div>
-    </div>
-    <div class="item project-container">
-      <!-- project left side -->
-      <div class="left-side">
-        <div class="project-title">
-          <h3>Ruby Bot: <span class="hide_big">Update my</span> #100DaysOfCode <span class="hide_big">on Twitter</span> </h3>
-        </div>
-        <div class="paragraphs">
-          <p>Twitter bot that sends daily updates from repo to Twitter. </p>
-          <p>Checks Github repo, checks Twitter updates, sends tweet on gap.</p>
-        </div>
-      </div>
-      <!-- project right side -->
-      <div class="right-side">
-        <div class="top-row">
-          <div class="tech">
-            <span class="tag tag-ruby"></span>
-          </div>
-        </div>
-        <div class="app-picture">
-          <img src="<%= asset_path('project_05.gif') %>" alt="project_01 image">
-        </div>
-      </div>
-      <div class="button-area">
-        <a target="_blank" href="https://www.loom.com/share/99420eb2648c423bb910aff5bde6e0b2">
-          <button class="btn btn-project">
-            <span class="btn-4"></span>
-            Showcase
-          </button>
-        </a>
-        <a target="_blank" href="https://github.com/canriquez/ruby-twitter-bot">
-          <button class="btn btn-project">
-            <span class="btn-3"></span>
-            Github repo
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="skills" class="base-section">
-  <div class="section-title">
-    <h1>Skills</h1>
-  </div>
-  <div id="skills-flex">
-    <div id="electronics" class="skills-column">
-      <div class="head-icon">
-        <span id="skill-electronics"></span>
-      </div>
-      <div class="head-title">
-        <h2>Telecoms | Electronics</h2>
-      </div>
-      <div class="skill-text">
-        <p>BA in Electronics Engineering. Extensive experience on wireless mobile Telecoms engineering @telefonica.</p>
-      </div>
-      <div class="head-sub-title">
-        <h3>Experience working with</h3>
-      </div>
-      <ul class="skill-list">
-        <li>LAN/WAN Networks</i>
-        <li>2G/3G/4G(LTE) air inteface</i>
-        <li>RAN Capacity Panning</li>
-        <li>RAN Performance Optimization</li>
-        <li>Site design optimisation</li>
-        <li>Factory rollout optimization</li>
-        <p class="note">(*) RAN: Radio Access Network</p>
-      </ul>
-    </div>
-    <div id="software" class="skills-column">
-      <div class="head-icon">
-        <span id="skill-software"></span>
-      </div>
-      <div class="head-title">
-        <h2>software | development</h2>
-      </div>
-      <div class="skill-text">
-        <p>1500 hs training @microverseinc <br>
-          Experience with HTML/CSS Freelance projects. I love building projects to solve problems.</p>
-      </div>
-      <div class="head-sub-title">
-        <h3>Experience working with</h3>
-      </div>
-      <ul class="skill-list">
-        <li>HTML5 | CSS3 | SASS</li>
-        <li>SQL | SQLite | Postgresql</li>
-        <li>Ruby | Ruby on Rails</li>
-        <li class="ongoing">(Javascript | React | Redux)</li>
-        <li>Python</li>
-        <p class="note">1: ongoing training - @microverseinc</p>
-      </ul>
-    </div>
-    <div id="management" class="skills-column">
-      <div class="head-icon">
-        <span id="skill-management"></span>
-      </div>
-      <div class="head-title">
-        <h2>Management | Leadership</h2>
-      </div>
-      <div class="skill-text">
-        <p>MBA General Management. 16 years experience in Telecoms Industry. 10 years leading engineering teams. </p>
-      </div>
-      <div class="head-sub-title">
-        <h3>Experience working as</h3>
-      </div>
-      <ul class="skill-list">
-        <li>Head of Mobile Access</li>
-        <li>Corp. Head of Access Infra </li>
-        <li>PMO Line Manager</li>
-        <li>Radio Planning Manager</li>
-        <p class="note">1: Munich - 2: London - 3: Buenos Aires</p>
-      </ul>
-    </div>
-  </div>
-</section>
-<section id="quote-section" class="base-section">
-  <div class="section-content">
-    <div class="quote">
-      <p><span class="left-quote"></span>You do not rise to the level of your goals. You fall to the level of your systems.<span class="right-quote"></span></p>
-      <h4>James Clear | Atomic Habits</h4>
-    </div>
-  </div>
-</section>
-<section id="publications" class="base-section">
-  <div class="section-title">
-    <h1>Publications</h1>
-  </div>
-  <div id="pub-container" class="section-content">
-    <div class="storycard">
-      <div class="head-picture-medium">
-        <div class="picture-label">Medium</div>
-      </div>
-      <div class="story-title">
-        <a  href="https://medium.com/swlh/3-ideas-and-6-steps-you-need-to-leapfrog-careers-into-html-css-ba9db2a4588b">3 Ideas and 6 Steps You Need to Leapfrog Careers Into html/Css</a>
-      </div>
-      <div class="story-short">
-        <p class="story-teaser">Change is hard, and as a goal, software development is not easy at all. After working 17 years in Telecoms, I am now in the middle of a career change. </p>
-      </div>
-      <div class="story-bottom">
-        <div class="tags">
-          <div class="status">published</div>
-        </div>
-        <div class="when"><%= post_age('07-02-2020') %> ago.</div>
-      </div>
-    </div>
-    <div class="storycard">
-      <div class="head-picture">
-        <div class="picture-label">Hackernoon</div>
-      </div>
-      <div class="story-title">
-        <a  href="https://hackernoon.com/a-beginners-guide-to-making-a-career-as-an-htmlcss-developer-hy9832n9">A Beginner's Guide to Making a Career As an HTML/CSS Developer</a>
-      </div>
-      <div class="story-short">
-        <p class="story-teaser">Change is hard, and as a goal, software development is not easy at all. After working 17 years in Telecoms, I am now in the middle of a career change. </p>
-      </div>
-      <div class="story-bottom">
-        <div class="tags">
-          <div class="status">published</div>
-        </div>
-        <div class="when"><%= post_age('9-05-2020') %> ago.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="get-in-touch" class="base-section">
-  <div class="title-heading">
-    <h1 id="title-heading-1">Get in touch with me</h1>
-  </div>
-  <div class="contact-links">
-    <div class="title-icons in-touch">
-      <a id="git"  target="_blank" href="https://github.com/canriquez"></a>
-      <a id="lin"  target="_blank" href="https://www.linkedin.com/in/carlosanriquez/"></a>
-      <a id="twi"  target="_blank" href="https://twitter.com/cranriquez"></a>
-      <a id="sts"  target="_blank" href="https://sourcerer.io/canriquez"></a>
-    </div>
-  </div>
-  <div class="small-form">
-    <form id="contact-form">
-      <h3>Send a message</h3>
-      <p>Please send an email to <%= mail_to "carlos@anriquez.com", "carlos@anriquez.com",
+    <div class="small-form">
+      <form id="contact-form">
+        <h3>Send a message</h3>
+        <p>Please send an email to <%= mail_to "carlos@anriquez.com", "carlos@anriquez.com",
          subject: "Hey Carlos!" %> or, if you prefer, please fill the form below.
-        <p>
-          <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input name="name" type="text" class="form-control" id="name" placeholder="Full name">
+          <p>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Full name">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Email address">
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <div class="form-group">
+                  <input name="subject" type="text" class="form-control" id="tema" placeholder="Subject">
+                </div>
               </div>
             </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input name="email" type="email" class="form-control" id="email" placeholder="Email address">
+            <div class="form-group">
+              <textarea name="message" class="form-control" id="message" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="bottom-form">
+              <div class="captchas">
+                <div class="g-recaptcha" data-sitekey="6LdJkwEVAAAAACbG-mtK0v_8kVdI7ENINRRi4GIr" data-callback="recaptchaCallback"></div>
+                <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+              </div>
+              <div id="sbt-btn">
+                <input id="submit-btn" class="btn btn-general btn-home" type="submit" value="Send">
               </div>
             </div>
-            <div class="col-md-12 col-sm-12">
-              <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="tema" placeholder="Subject">
-              </div>
+          </form>
+        </div>
+      </section>
+      <!-- Models area -->
+      <div id="modals">
+        <div id="modal-confirmation" class="card text-center">
+          <div class="card-body d-flex flex-column align-items-center">
+            <div class="confirmation-svg">
+              <span></span>
             </div>
-          </div>
-          <div class="form-group">
-            <textarea name="message" class="form-control" id="message" placeholder="Mensaje"></textarea>
-          </div>
-          <div class="bottom-form">
-            <div class="captchas">
-              <div class="g-recaptcha" data-sitekey="6LdJkwEVAAAAACbG-mtK0v_8kVdI7ENINRRi4GIr" data-callback="recaptchaCallback"></div>
-              <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+            <div class="card-title">
             </div>
-            <div id="sbt-btn">
-              <input id="submit-btn" class="btn btn-general btn-home" type="submit" value="Send">
-            </div>
+            <%= link_to root_path do %>
+              <span class="btn-general btn-home">Go back to page</span>
+            <% end %>
           </div>
-        </form>
-      </div>
-    </section>
-    <!-- Models area -->
-    <div id="modals">
-      <div id="modal-confirmation" class="card text-center">
-        <div class="card-body d-flex flex-column align-items-center">
-          <div class="confirmation-svg">
-            <span></span>
-          </div>
-          <div class="card-title">
-          </div>
-          <%= link_to root_path do %>
-            <span class="btn-general btn-home">Go back to page</span>
-          <% end %>
         </div>
       </div>
-    </div>
-    <!-- end modals area -->
-    <footer class="text-center">
-      <div class="footer-wrap">
-        <div class="footer-content">
-          <p>&copy <%= copy_year %> Carlos Anriquez | <span>Software Development </span> | Engineering</p>
+      <!-- end modals area -->
+      <footer class="text-center">
+        <div class="footer-wrap">
+          <div class="footer-content">
+            <p>&copy <%= copy_year %> Carlos Anriquez | <span>Software Development </span> | Engineering</p>
+          </div>
         </div>
-      </div>
-      <!-- button to go back to the top of page -->
-      <a href="#root-home" id="backup-button" class="smooth-scroll">
-      </a>
-    </footer>
+        <!-- button to go back to the top of page -->
+        <a href="#root-home" id="backup-button" class="smooth-scroll">
+        </a>
+      </footer>
