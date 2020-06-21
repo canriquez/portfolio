@@ -65,12 +65,13 @@ label .form-error {
 }
 
 
-// Color setup
-$text: #011627;
+// Color setup 1: https://coolors.co/011627-fdfffc-2ec4b6-e71d36-ff9f1c
+$black: #011627;
 $white:#fdfffc;
 $standout1: #e71d36;
 $detail: #2ec4b6;
 $standout2: #ff9f1c;
+$contact_icon_color: #00a7e1;
 
 
 //#################################
@@ -147,7 +148,7 @@ section {
         font-family: "ProximaBold", san-serif;
         font-size: 3vh;
         transition: all 0.8s;
-        color: black;
+        color: $black;
         width: 90%;
         line-height: 5vh;
     }
@@ -169,13 +170,23 @@ section {
 }
 
 .btn-home {
-    background-color: white;
+    background-color: $white;
 }
 
-.btn-home:hover,
-.btn-home:focus {
-    color: white;
-    background: gray;
+#sbt-btn .btn-home,
+#contact-me-root .btn-home,
+#resume-me-root .btn-home {
+    color: $standout2 !important;
+}
+
+#sbt-btn .btn-home:hover,
+#contact-me-root .btn-home:hover,
+#resume-me-root .btn-home:hover,
+#sbt-btn .btn-home:focus,
+#contact-me-root .btn-home:focus,
+#resume-me-root .btn-home:focus {
+    color: $white !important;
+    background: $standout2;
     box-shadow: 6px 6px 11px #727272, -6px -6px 11px #ffffff;
 
 }
@@ -190,12 +201,13 @@ section {
     font-size: 0.9rem;
     font-family: "ProximaBold", san-serif;
     text-transform: capitalize;
-    color: black;
+    color: $standout2;
 
     border-radius: 5px;
     padding: 8px;
     margin: 6px;
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.2);
+    background: white;
 }
 
 .button-area .btn-project span {
@@ -215,11 +227,13 @@ section {
     height: 100%;
 }
 
+
+
 .btn-project:hover,
 .btn-project:focus {
-    color: white;
-    background: gray;
-    border: 1px solid gray;
+    color: $white;
+    background: $standout2;
+    border: 1px solid $standout2;
 }
 
 .button-area a:hover {
@@ -231,7 +245,7 @@ section {
     mask: image-url("link_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: black;
+    background-color: $standout2;
 }
 
 .btn-project .btn-2::after {
@@ -239,7 +253,7 @@ section {
     mask: image-url("case_1.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: black;
+    background-color: $standout2;
 }
 
 .btn-project .btn-3::after {
@@ -247,7 +261,7 @@ section {
     mask: image-url("git.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: black;
+    background-color: $standout2;
 }
 
 .btn-project .btn-4::after {
@@ -255,25 +269,30 @@ section {
     mask: image-url("video.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: black;
+    background-color: $standout2;
 }
 
-.btn-project span:hover::after,
+/* .btn-project span:hover::after,
 .btn-project span:focus::after {
-    background-color: white;
+    background-color: $white;
+} */
+
+.btn-project:hover span::after,
+.btn-project:focus span::after {
+    background-color: $white;
 }
 
 //###### back to UP button
 
 .btn-back {
-    background: red !important;
+    background: $standout2 !important;
     position: fixed;
     bottom: 40px;
     right: 20px;
     padding: 7px 15px;
     display: none;
-    border-color: red !important;
-    color: white;
+    border-color: $standout2 !important;
+    color: $white;
     z-index: 3;
 }
 
@@ -313,8 +332,8 @@ section {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 
-    width: 7vh;
-    height: 7vh;
+    width: 7.2vh;
+    height: 7.2vh;
 }
 
 .title-icons #git::after {
@@ -322,7 +341,7 @@ section {
     mask: image-url("git.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: gray;
+    background-color: rgb(27, 31, 35);
 }
 
 .title-icons #lin::after {
@@ -330,7 +349,7 @@ section {
     mask: image-url("lin.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: gray;
+    background-color: #0e76a8;
 }
 
 .title-icons #twi::after {
@@ -338,15 +357,15 @@ section {
     mask: image-url("twi.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: gray;
+    background-color: rgb(30, 142, 238);
 }
 
 .title-icons #sts::after {
-    -webkit-mask: image-url("sts.svg") no-repeat 100% 100%;
-    mask: image-url("sts.svg") no-repeat 100% 100%;
+    -webkit-mask: image-url("sou.svg") no-repeat 100% 100%;
+    mask: image-url("sou.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: gray;
+    background-color: #00E7AA;
 }
 
 //############### back-button #########
@@ -382,7 +401,7 @@ section {
     mask: image-url("up-arrow.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: red;
+    background-color: $standout2;
 }
 
 //############### skills icons #########
@@ -415,7 +434,7 @@ section {
 .head-icon #skill-electronics::after {
     -webkit-mask: image-url("skill_radio.svg") no-repeat 100% 100%;
     mask: image-url("skill_radio.svg") no-repeat 100% 100%;
-    background-color: black;
+    background-color: $black;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -424,7 +443,7 @@ section {
 .head-icon #skill-software::after {
     -webkit-mask: image-url("skill_software.svg") no-repeat 100% 100%;
     mask: image-url("skill_software.svg") no-repeat 100% 100%;
-    background-color: black;
+    background-color: $black;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -433,7 +452,7 @@ section {
 .head-icon #skill-management::after {
     -webkit-mask: image-url("skill_manager1.svg") no-repeat 100% 100%;
     mask: image-url("skill_manager1.svg") no-repeat 100% 100%;
-    background-color: black;
+    background-color: $black;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -460,7 +479,7 @@ section {
 .quote .left-quote::after {
     -webkit-mask: image-url("left-quote.svg") no-repeat 100% 100%;
     mask: image-url("left-quote.svg") no-repeat 100% 100%;
-    background-color: white;
+    background-color: $white;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -471,7 +490,7 @@ section {
 .quote .right-quote::after {
     -webkit-mask: image-url("right-quote.svg") no-repeat 100% 100%;
     mask: image-url("right-quote.svg") no-repeat 100% 100%;
-    background-color: white;
+    background-color: $white;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -499,7 +518,7 @@ section {
 .confirmation-svg span::after {
     -webkit-mask: image-url("thanks_ok.svg") no-repeat 100% 100%;
     mask: image-url("thanks_ok.svg") no-repeat 100% 100%;
-    background-color: green;
+    background-color: $standout2;
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1;
@@ -554,7 +573,7 @@ section {
 }
 
 #title-background {
-    //background-color: red;
+    //background-color: $standout2;
     width: auto;
     height: auto;
     min-width: 100%;
@@ -599,7 +618,7 @@ section {
 .title-heading h1 {
     width: 100%;
     font-family: "ProximaBold";
-    color: black;
+    color: $black;
     font-size: 5vh;
     text-transform: uppercase;
     margin: 0;
@@ -610,7 +629,7 @@ section {
 #title-sub-heading h3 {
     width: 100%;
     font-family: "ProximaThin";
-    color: black;
+    color: $black;
     font-size: 3vh;
     text-transform: capitalize;
     margin: 25px 0 15px 0;
@@ -622,7 +641,7 @@ section {
 #title-details h4 {
     width: 100%;
     font-family: "ProximaThin";
-    color: black;
+    color: $black;
     font-size: 2.5vh;
     margin: 10px 0 10px 0;
     display: inline-block;
@@ -631,7 +650,7 @@ section {
 }
 
 .title-heading .key {
-    color: blue;
+    color: $standout2;
 }
 
 #contact-me {
@@ -667,7 +686,7 @@ section {
     mask: image-url("arrow_down.svg") no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: black;
+    background-color: $black;
     z-index: 1;
 }
 
@@ -713,7 +732,7 @@ section {
     display: inline-block;
     -webkit-mask: image-url("tag-award.svg") no-repeat 100% 100%;
     mask: image-url("tag-award.svg") no-repeat 100% 100%;
-    background-color: gold;
+    background-color: $standout2;
     height: 24px;
     width: 24px;
     margin-left: 3px;
@@ -797,7 +816,7 @@ section {
 
 .section-title h1 {
     font-family: "ProximaBold";
-    color: red;
+    color: $standout2;
     font-size: 3.5vh;
     text-transform: uppercase;
     margin: 0;
@@ -825,7 +844,7 @@ section {
     display: inline-block;
     width: 90%;
     font-family: "ProximaReg";
-    color: black;
+    color: $black;
     font-size: 3vh;
     display: inline-block;
     text-align: left;
@@ -952,7 +971,7 @@ section {
 
 .skills-column .head-title h2 {
     font-family: "ProximaBold";
-    color: black;
+    color: $black;
     font-size: 3.5vh;
     text-transform: uppercase;
     margin: 0;
@@ -964,7 +983,7 @@ section {
     width: 90%;
     font-family: "ProximaReg";
     font-size: 2.3vh;
-    color: black;
+    color: $black;
     line-height: 3.5vh;
     margin: 1.4vh auto;
     text-align: center;
@@ -973,7 +992,7 @@ section {
 .skills-column .head-sub-title h3 {
     margin: 2vh auto;
     font-family: "ProximaBold";
-    color: black;
+    color: $black;
     font-size: 3vh;
     text-transform: capitalise;
     display: inline-block;
@@ -1080,7 +1099,7 @@ section {
     font-size: 3vh;
     line-height: 6.5vh;
     text-align: center;
-    color: white;
+    color: $white;
 }
 
 .quote h4 {
@@ -1088,7 +1107,7 @@ section {
     font-size: 2.5vh;
     line-height: 5.5vh;
     text-align: center;
-    color: white;
+    color: $white;
 }
 
 //#######################################
@@ -1129,7 +1148,7 @@ section {
             left: 0%;
             background: rgba(0, 0, 0, 0.3);
             padding: 3px 10px;
-            color: white;
+            color: $white;
         }
     }
 
@@ -1149,7 +1168,7 @@ section {
             left: 0%;
             background: rgba(0, 0, 0, 0.3);
             padding: 3px 10px;
-            color: white;
+            color: $white;
         }
     }
 
@@ -1160,7 +1179,7 @@ section {
 
         a {
             text-decoration: none;
-            color: black;
+            color: $black;
         }
     }
 
@@ -1184,17 +1203,17 @@ section {
         .status {
             margin-left: 1vh;
             border: solid 1px;
-            border-color: rgb(24, 177, 2);
-            background-color: rgb(24, 177, 2);
+            border-color: $standout2;
+            background-color: $standout2;
             padding: 1px 4px;
-            color: white;
+            color: $white;
             border-radius: 5px;
             font-size: 2vh;
         }
 
         .when {
             font-family: "ProximaThin";
-            color: black;
+            color: $black;
             font-size: 2.2vh;
             padding: 5px;
         }
@@ -1306,11 +1325,11 @@ footer {
 footer p {
     color: #fff;
     line-height: 4vh;
-    font-size: 2vh;
+    font-size: 2.7vh;
 }
 
 footer p span {
-    color: yellow;
+    color: $standout2;
 }
 
 //#######################################
@@ -1353,7 +1372,7 @@ footer p span {
         font-size: 6vw;
         text-transform: uppercase;
         margin: 0px;
-        color: black;
+        color: $black;
     }
 }
 
@@ -1369,36 +1388,38 @@ ul.navbar-nav>li>a {
 ul.navbar-nav>li>a:hover,
 ul.navbar-nav>li>a:focus {
     background: none;
-    color: red;
+    color: $standout2;
 }
 
-//White navigation
+//$white navigation
 .nav-top {
-    background: black;
+    background: $black;
     box-shadow: 6px 6px 11px #727272, -6px -6px 11px #ffffff;
     z-index: 3;
 
     ul.navbar-nav>li>a {
-        color: white;
+        color: $white;
     }
 
     ul.navbar-nav>li>a:hover,
     ul.navbar-nav>li>a:focus {
         background: none;
-        color: red;
+        color: $standout2;
     }
 
     .navbar-brand {
         padding-top: 10px;
 
         p {
-            color: white;
+            color: $white;
         }
     }
 }
 
+// Scroll spy
+
 ul.navbar-nav>li.active>a {
-    color: red;
+    color: $standout2;
 }
 
 //############ mobile burger menu #########
@@ -1434,7 +1455,7 @@ ul.navbar-nav>li.active>a {
     display: block;
     width: 24px;
     height: 4px;
-    background-color: red;
+    background-color: $standout2;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1525,7 +1546,19 @@ ul.navbar-nav>li.active>a {
         text-transform: uppercase;
         padding-left: 5px;
         padding-right: 0;
-        color: black;
+        color: $black;
+    }
+
+    li a:hover,
+    li a:focus {
+        color: $standout2;
+        background: none;
+    }
+
+    //mobile nav spy
+
+    ul.nav>li.active>a {
+        color: $standout2;
     }
 }
 
@@ -1957,7 +1990,8 @@ ul.navbar-nav>li.active>a {
     //############## navigation ###########
 
     // first disable mobile burger menu
-    .navbar-header .header-burger,
+
+    .nav-wrap .header-burger,
     .nav-wrap .mobile-burger-options {
         display: none;
     }
@@ -1968,6 +2002,8 @@ ul.navbar-nav>li.active>a {
         }
     }
 
+
+
     .navbar-brand {
 
         img {
@@ -1975,9 +2011,18 @@ ul.navbar-nav>li.active>a {
         }
 
         p {
-            font-size: 3vw;
+            font-size: 3.1vw;
         }
     }
+
+    ul.navbar-nav>li>a {
+        font-family: "ProximaBold", sans-serif;
+        padding: 8px;
+        color: #000;
+        font-size: 1.8vw;
+        text-transform: uppercase;
+    }
+
 }
 
 //###################################################
