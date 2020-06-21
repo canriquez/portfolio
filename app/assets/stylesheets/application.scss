@@ -1620,11 +1620,11 @@ ul.navbar-nav>li.active>a {
     }
 }
 
-//###################################################
-//#           XS- screen media query - landscape    #
-//###################################################
+//##########################################################
+//#           XS- screen media query - <812px landscape    #
+//##########################################################
 
-@media (min-width : 320px) and (max-width : 480px) and (orientation :landscape) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 736px) and (orientation : landscape) {
     #root-home {
         flex-direction: row;
         position: relative;
@@ -1634,6 +1634,376 @@ ul.navbar-nav>li.active>a {
         justify-content: space-around;
     }
 
+    #contact-me,
+    #get-resume,
+    #move-down {
+        display: none;
+    }
+
+    #home {
+        flex-basis: 48%;
+        height: 50vh;
+        align-self: flex-end;
+    }
+
+    #about {
+        flex-basis: 48%;
+        height: 55vh;
+        align-self: flex-end;
+    }
+
+    #about #home-about .paragraphs {
+        margin-top: 0;
+    }
+
+    #about #home-about .paragraphs p {
+        width: 100%;
+        font-size: 3.5vh;
+        line-height: 4.5vh;
+    }
+
+
+    #root-buttons {
+        margin-top: 3vh;
+        width: 100%;
+        align-self: center;
+    }
+
+    #root-move-down {
+        bottom: 10vh;
+    }
+
+    #main-title {
+        margin-top: 0%;
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    #main-title h1 {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    #main-title h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0;
+        width: 100;
+        text-align: left;
+    }
+
+    #title-sub-heading h3 {
+        margin: 10px 0 5px 0;
+    }
+
+    #main-title h4 {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .title-icons {
+        margin-top: 0;
+        width: 90%;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    .title-icons a {
+        margin-top: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .title-icons a::after {
+        width: 37px;
+        height: 37px;
+    }
+
+    #contact-me {
+        margin-top: 10%;
+        align-self: center;
+    }
+
+    .btn-general {
+        font-size: 2vw;
+    }
+
+    //########### about media ############
+
+    #home-about {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    #home-about .paragraphs {
+        margin-bottom: 0px;
+    }
+
+    #home-about .paragraphs p {
+        font-size: 3vh;
+        line-height: 3.3vh;
+    }
+
+    .paragraphs .mobile {
+        font-family: "ProximaThin";
+        font-size: 5rem;
+    }
+
+    //########### root buttons ############
+
+    #root-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    //######### projects section ###################
+
+    .right-side .app-picture img {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 20px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .right-side .award-batch {
+        width: 30%;
+    }
+
+    #publications .section-content {
+        margin-top: 10px;
+    }
+
+    //GET IN TOUCH
+    #get-in-touch {
+        height: 120vh;
+        width: 74%;
+    }
+
+    //###### Navigation #####
+
+    .navbar-brand {
+
+        img {
+            width: 40px;
+            margin: 6px 16px 6px 16px;
+        }
+
+        p {
+            font-size: 2.8vw;
+        }
+    }
+
+    //################# burger menu options #########
+
+    .mobile-burger-options {
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        height: 65vh;
+        padding: 10px;
+        right: -13px;
+        bottom: 0;
+        transform: translateY(104%);
+        background: rgba(255, 255, 255, .90);
+        box-shadow: 6px 6px 11px #727272;
+        overflow: hidden;
+    }
+}
+
+//##################################################################
+//#           XS- screen media query - >812px landscape  ratio :3  #
+//##################################################################
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) {
+    /* #root-home {
+        flex-direction: row;
+        position: relative;
+        flex-wrap: wrap;
+        height: 100vh;
+        //margin-top: 3vh;
+        justify-content: space-around;
+    } */
+
+    #contact-me,
+    #get-resume,
+    #move-down {
+        display: none;
+    }
+
+    #home {
+        flex-basis: 48%;
+        height: 50vh;
+        align-self: flex-end;
+    }
+
+    #about {
+        flex-basis: 48%;
+        height: 55vh;
+        align-self: flex-end;
+    }
+
+    #about #home-about .paragraphs {
+        margin-top: 0;
+    }
+
+    #about #home-about .paragraphs p {
+        width: 100%;
+        margin-top: 0 !important;
+        font-size: 4.0vh !important;
+        line-height: 5.0vh !important;
+    }
+
+
+    #root-buttons {
+        margin-top: 3vh;
+        width: 100%;
+        align-self: center;
+    }
+
+    #root-move-down {
+        bottom: 10vh;
+    }
+
+    #main-title {
+        margin-top: 0%;
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    #main-title h1 {
+        font-size: 1.3rem !important;
+        text-align: left;
+    }
+
+    #main-title h3 {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        padding: 0;
+        width: 100;
+        text-align: left;
+    }
+
+    #title-sub-heading h3 {
+        margin: 10px 0 5px 0;
+    }
+
+    #main-title h4 {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .title-icons {
+        margin-top: 0;
+        width: 90%;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    .title-icons a {
+        margin-top: 0 !important;
+        width: 35px !important;
+        height: 35px !important;
+        border-radius: 10px !important;
+    }
+
+    .title-icons a::after {
+        width: 37px !important;
+        height: 37px !important;
+    }
+
+    #contact-me {
+        margin-top: 10%;
+        align-self: center;
+    }
+
+    .btn-general {
+        font-size: 2vw;
+    }
+
+
+
+    //######### projects section ###################
+
+
+    .left-side .project-title h3 {
+        text-align: left;
+        font-size: 6vh !important;
+    }
+
+    .left-side .paragraphs p {
+        text-align: left;
+        font-size: 4.5vh !important;
+    }
+
+    .right-side .app-picture img {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 20px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .right-side .tech .tag {
+        width: 40px;
+        height: 20px;
+
+    }
+
+    .right-side .award-batch {
+        width: 50% !important;
+
+        .tag-award {
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    }
+
+    #publications .section-content {
+        margin-top: 10px;
+    }
+
+    //GET IN TOUCH
+    #get-in-touch {
+        height: 110vh !important;
+        width: 74%;
+    }
+
+    form#contact-form {
+        height: 64vh !important;
+    }
+
+    //###### Navigation #####
+
+    .navbar-brand {
+
+        img {
+            width: 40px;
+            margin: 6px 16px 6px 16px;
+        }
+
+        p {
+            font-size: 2.8vw;
+        }
+    }
+
+    //################# burger menu options #########
+
+    .mobile-burger-options {
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        height: 65vh;
+        padding: 10px;
+        right: -13px;
+        bottom: 0;
+        transform: translateY(104%);
+        background: rgba(255, 255, 255, .90);
+        box-shadow: 6px 6px 11px #727272;
+        overflow: hidden;
+    }
 }
 
 //###################################################
@@ -1823,6 +2193,10 @@ ul.navbar-nav>li.active>a {
     .project-container .right-side {
         width: 100%;
         justify-content: center;
+
+        .top-row {
+            width: 65%;
+        }
 
         .app-picture {
             overflow: hidden;

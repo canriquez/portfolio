@@ -32,7 +32,7 @@ document.addEventListener("turbolinks:load", function () {
         items: 1,
         autoplay: false,
         smartSpeed: 700,
-        autoplayTimeout: 5000
+        autoplayTimeout: 20000
     });
 
     /*=========================================================
