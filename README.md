@@ -1,8 +1,8 @@
 # Personal Portfolio Page
 
-> App to display contact details and work selection
+> Portfolio web-app to display main contact details and my personal work selection.
 
-![screenshot](./app_screenshot.png)
+![screenshot](/app_screenshot.png)
 
 Project built on Rails with the aim to iclude further backend services.
 
