@@ -1,57 +1,37 @@
-# Project Name
+# Personal Portfolio Page
 
-> One paragraph statement about the project.
+> App to display contact details and work selection
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Project built on Rails with the aim to iclude further backend services.
+
+- Release v0.1: 22/06/2020. Full responsive HTML page for project and contact point display.
+- Release v0.5: (exp. eop July 2020). Adding a Twitter Bot Api to search and store my tweets. Bot running on crontab at server. Main app would consume latest tweets to display on main page as a new section.
+- Release v1.0: (exp. eop August 2020). Adding job search scraper on key webpages. Visitors could register themselves to recieve weekley updates about jobs and my latest articles.
+
+
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby, Javascript, HTML/CSS/SCSS, ERB. 
+- Rails
+- AWS EC2 Instance running in production.
+- VS Code
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+[Live Demo Link: carlosanriquez.com](https://www.carlosanriquez.com)
 
 
 ## Authors
 
-👤 **Author1**
+👤 ***Carlos Anriquez***
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@canriquez](https://github.com/canriquez)
+- Twitter: [@cranriquez](https://twitter.com/cranriquez)
+- Linkedin: [linkedin](https://www.linkedin.com/in/carlosanriquez/)
 
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -65,10 +45,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- My Family!
 
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
