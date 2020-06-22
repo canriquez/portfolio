@@ -2006,6 +2006,8 @@ ul.navbar-nav>li.active>a {
     }
 }
 
+
+
 //###################################################
 //#            mid-screen media query               #
 //###################################################
@@ -2045,7 +2047,7 @@ ul.navbar-nav>li.active>a {
 
     #about #home-about .paragraphs p {
         width: 100%;
-        font-size: 2.8vh;
+        font-size: 2.7vh;
         line-height: 3.2vh;
     }
 
@@ -2703,5 +2705,200 @@ ul.navbar-nav>li.active>a {
 
     #get-in-touch .small-form {
         width: 60%;
+    }
+}
+
+//##################################################################
+//#          iPhone 6, 7, & 8 Plus in landscape                    #
+//##################################################################
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+    #root-home {
+        flex-direction: row;
+        position: relative;
+        flex-wrap: wrap;
+        height: 100vh;
+        margin-top: 3vh;
+        justify-content: space-around;
+    }
+
+    #root-buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #home {
+        flex-basis: 48%;
+        height: 50vh;
+        align-self: flex-end;
+    }
+
+    #about {
+        flex-basis: 48%;
+        height: 55vh;
+        align-self: flex-end;
+    }
+
+    #about #home-about .paragraphs {
+        margin-top: 0;
+    }
+
+    #about #home-about .paragraphs p {
+        width: 100%;
+        margin-top: 0 !important;
+        font-size: 3.5vh !important;
+        line-height: 4.5vh !important;
+    }
+
+
+    #root-buttons {
+        margin-top: 3vh;
+        width: 100%;
+        align-self: center;
+    }
+
+    #root-move-down {
+        bottom: 10vh;
+    }
+
+    #main-title {
+        margin-top: 0%;
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    #main-title h1 {
+        font-size: 1.3rem !important;
+        text-align: left;
+    }
+
+    #main-title h3 {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        padding: 0;
+        width: 100;
+        text-align: left;
+    }
+
+    #title-sub-heading h3 {
+        margin: 10px 0 5px 0;
+    }
+
+    #main-title h4 {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .title-icons {
+        margin-top: 0;
+        width: 90%;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    .title-icons a {
+        margin-top: 0 !important;
+        width: 35px !important;
+        height: 35px !important;
+        border-radius: 10px !important;
+    }
+
+    .title-icons a::after {
+        width: 37px !important;
+        height: 37px !important;
+    }
+
+    #contact-me {
+        margin-top: 10%;
+        align-self: center;
+    }
+
+    .btn-general {
+        font-size: 2vw;
+    }
+
+
+
+    //######### projects section ###################
+
+
+    .left-side .project-title h3 {
+        text-align: left;
+        font-size: 6vh !important;
+    }
+
+    .left-side .paragraphs p {
+        text-align: left;
+        font-size: 4.5vh !important;
+    }
+
+    .right-side .top-row {
+        width: 60%;
+    }
+
+    .right-side .app-picture img {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 20px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .right-side .tech .tag {
+        width: 40px;
+        height: 20px;
+
+    }
+
+    .right-side .award-batch {
+        width: 50% !important;
+
+        .tag-award {
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    }
+
+    #publications .section-content {
+        margin-top: 10px;
+    }
+
+    //GET IN TOUCH
+    #get-in-touch {
+        height: 110vh !important;
+        width: 74%;
+    }
+
+    form#contact-form {
+        height: 64vh !important;
+    }
+
+    //###### Navigation #####
+
+    .navbar-brand {
+
+        img {
+            width: 40px;
+            margin: 6px 16px 6px 16px;
+        }
+
+        p {
+            font-size: 2.8vw;
+        }
+    }
+
+    //################# burger menu options #########
+
+    .mobile-burger-options {
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        height: 65vh;
+        padding: 10px;
+        right: -13px;
+        bottom: 0;
+        transform: translateY(104%);
+        background: rgba(255, 255, 255, .90);
+        box-shadow: 6px 6px 11px #727272;
+        overflow: hidden;
     }
 }
