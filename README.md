@@ -2,7 +2,7 @@
 
 > Portfolio web-app to display main contact details and my work selection.
 
-![screenshot](/app_screenshot.png)
+![screenshot](app_screenshot.png)
 
 Build-in Ruby on Rails with the ultimate aim to include further backend services.
 
