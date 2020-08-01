@@ -842,7 +842,7 @@ section {
 .paragraphs .mobile {
     margin: 10px auto;
     display: inline-block;
-    width: 90%;
+    width: 100%;
     font-family: "ProximaReg";
     color: $black;
     font-size: 3vh;
@@ -2127,12 +2127,12 @@ ul.navbar-nav>li.active>a {
     }
 
     #home-about .paragraphs p {
+        font-family: "ProximaReg";
         font-size: 3vh;
         line-height: 3.3vh;
     }
 
     .paragraphs .mobile {
-        font-family: "ProximaThin";
         font-size: 5rem;
     }
 
