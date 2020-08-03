@@ -1187,8 +1187,8 @@ section {
         margin: 0 2vh;
 
         .story-teaser {
-            font-size: 1.9rem;
-            line-height: 2.6rem;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
         }
     }
 
@@ -2282,6 +2282,12 @@ ul.navbar-nav>li.active>a {
 
         .story-short {
             margin: 0 2vh 2vh 2vh;
+
+            .story-teaser {
+                font-size: 1.9rem !important;
+                line-height: 2.6rem !important;
+            }
+
         }
     }
 
@@ -2595,11 +2601,18 @@ ul.navbar-nav>li.active>a {
             height: 75vh;
             margin: 1vh 0;
             margin-top: 0;
+
+            .story-short {
+
+
+                .story-teaser {
+                    font-size: 1.5rem;
+                    line-height: 2.0rem;
+                }
+            }
         }
 
-        .story-teaser {
-            line-height: 2.5rem;
-        }
+
     }
 
     //########### get in touch  ############
