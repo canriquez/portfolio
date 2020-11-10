@@ -1,5 +1,5 @@
 # Change these
-server '18.233.156.156', port: 22, roles: [:web, :app, :db], primary: true
+server '34.229.155.242', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:canriquez/portfolio.git'
 set :application,     'portfolio'
