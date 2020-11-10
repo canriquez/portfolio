@@ -102,25 +102,18 @@ end
 # kill -s SIGTERM pid   # Stop puma
 
 namespace :rails do
-  desc "Open the rails console"
-  task :console do
-    on roles(:app) do
-      rails_env = fetch(:rails_env, 'production')
-      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails console #{rails_env}"
-    end
+  desc "Remote console"
+  task :console, :roles => :app do
+    run_interactively "bundle exec rails console #{rails_env}"
   end
 
-  desc "Open the rails dbconsole"
-  task :dbconsole do
-    on roles(:app) do
-      rails_env = fetch(:rails_env, 'production')
-      execute_interactively "$HOME/.rbenv/bin/rbenv exec bundle exec rails dbconsole #{rails_env}"
-    end
+  desc "Remote dbconsole"
+  task :dbconsole, :roles => :app do
+    run_interactively "bundle exec rails dbconsole #{rails_env}"
   end
+end
 
-  def execute_interactively(command)
-    user = fetch(:user)
-    port = fetch(:port) || 22
-    exec "ssh -l #{user} #{host} -p #{port} -t 'cd #{deploy_to}/current && #{command}'"
-  end
+def run_interactively(command)
+  server ||= find_servers_for_task(current_task).first
+  exec %Q(ssh #{user}@#{myproductionhost} -t '#{command}')
 end
