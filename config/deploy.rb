@@ -35,6 +35,7 @@ set :pg_ask_for_password, true
 set :rvm_type, :system
 append :linked_files, "config/master.key"
 append :linked_files, "config/secrets.yml.key"
+append :linkef_files, "config/credentials.yml.enc"
 append :linked_files, ".env.production"
 
 ## Defaults:
