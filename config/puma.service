@@ -1,0 +1,16 @@
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/www/portfolio
+Environment=RAILS_ENV=production
+
+ExecStart=/home/ubuntu/.rbenv/shims/bundle -C /path/to/my/rails-app/config/puma.rb
+Restart=always
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
