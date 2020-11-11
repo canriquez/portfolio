@@ -8,7 +8,9 @@ User=ubuntu
 WorkingDirectory=/home/ubuntu/www/portfolio
 Environment=RAILS_ENV=production
 
-ExecStart=/usr/share/rvm/rubies/ruby-2.6.5/bin/ruby -C /home/ubuntu/www/portfolio/config/puma.rb
+ExecStart=/home/ubuntu/.rbenv/shims/bundle exec puma -e production -C /home/ubuntu/www/portfolio/config/puma.rb /home/ubuntu/www/portfolio/config.ru --pidfile /home/ubuntu/www/portfolio/shared/pids/puma.pid
+PIDFile=/home/ubuntu/www/portfolio/tmp/pids/puma.pid
+
 Restart=always
 KillMode=process
 
