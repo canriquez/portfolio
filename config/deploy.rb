@@ -1,6 +1,9 @@
 # Change these
 server '34.229.155.242', port: 22, roles: [:web, :app, :db], primary: true
 
+set :rbenv_type, :user # :user or :system, depends on your rbenv setup
+set :rbenv_ruby, File.read('.ruby-version').strip
+
 set :repo_url,        'git@github.com:canriquez/portfolio.git'
 set :application,     'portfolio'
 set :user,            'ubuntu'
