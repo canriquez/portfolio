@@ -1,20 +1,30 @@
 # Place in /config/puma/production.rb
+# Change to match your CPU core count
+workers 1
 
-rails_env = "production"
+# Min and Max threads per worker
+threads 1, 6
+
+app_dir = File.expand_path("../..", __FILE__)
+shared_dir = "#{app_dir}/shared"
+
+# Default to production
+rails_env = ENV['RAILS_ENV'] || "production"
 environment rails_env
 
-app_dir = "/home/ubuntu/www/portfolio" # Update me with your root rails app path
+# Set up socket location
+bind "unix://#{shared_dir}/sockets/puma.sock"
 
-bind  "unix://#{app_dir}/puma.sock"
-pidfile "#{app_dir}/puma.pid"
-state_path "#{app_dir}/puma.state"
-directory "#{app_dir}/"
+# Logging
+stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
 
-stdout_redirect "#{app_dir}/log/puma.stdout.log", "#{app_dir}/log/puma.stderr.log", true
+# Set master PID and state locations
+pidfile "#{shared_dir}/pids/puma.pid"
+state_path "#{shared_dir}/pids/puma.state"
+activate_control_app
 
-workers 2
-threads 1,2
-
-activate_control_app "unix://#{app_dir}/pumactl.sock"
-
-prune_bundler
+on_worker_boot do
+  require "active_record"
+  ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
+  ActiveRecord::Base.establish_connection(YAML.load_file("#{app_dir}/config/database.yml")[rails_env])
+end
