@@ -8,7 +8,7 @@ User=ubuntu
 WorkingDirectory=/home/ubuntu/www/portfolio
 Environment=RAILS_ENV=production
 
-ExecStart=/home/ubuntu/.rbenv/shims/bundle -C /path/to/my/rails-app/config/puma.rb
+ExecStart=/usr/share/rvm/rubies/ruby-2.6.5/bin/ruby -C /home/ubuntu/www/portfolio/config/puma.rb
 Restart=always
 KillMode=process
 
